@@ -32,11 +32,23 @@ void blink_once() {
     set_level(brightness);
 }
 
-// Just go dark for a moment to indicate to user that something happened
-void blip() {
-    uint8_t temp = actual_level;
-    set_level(0);
-    delay_4ms(3);
-    set_level(temp);
+void blink_some(uint8_t times) {
+    blink_once();
+    for (uint8_t i = 1; i < times; i++) {
+        delay_4ms(100); //about 0.4s
+        blink_once();
+    }
 }
 
+// Just go dark for a moment to indicate to user that something happened
+void blip() {
+    blip_ms(12);
+}
+
+// ms must be multiples of 4
+void blip_ms(uint8_t ms) {
+    uint8_t temp = actual_level;
+    set_level(0);
+    delay_4ms(ms/4);
+    set_level(temp);
+}

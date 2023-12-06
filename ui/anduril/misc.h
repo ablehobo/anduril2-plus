@@ -6,5 +6,6 @@
 
 //void blink_confirm(uint8_t num);  // no longer used
 void blink_once();
+void blink_some(uint8_t times);
 void blip();
-
+void blip_ms(uint8_t ms);
