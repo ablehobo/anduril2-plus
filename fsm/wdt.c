@@ -53,7 +53,7 @@ void WDT_inner() {
 
         adc_trigger = 0;  // make sure a measurement will happen
         adc_active_now = 1;  // use ADC noise reduction sleep mode
-        ADC_on();  // enable ADC voltage measurement functions temporarily
+        ADC_on();  // enable ADC voltage/temperature measurement functions temporarily
         #endif
     }
     else {  // button handling should only happen while awake

@@ -27,6 +27,11 @@ inline void clock_prescale_set(uint8_t n) {
 ////////// ADC voltage / temperature //////////
 
 inline void mcu_set_admux_therm() {
+     // Enabled, free-running (aka, auto-retrigger), run in standby
+    ADC0.CTRLA = ADC_ENABLE_bm | ADC_FREERUN_bm | ADC_RUNSTBY_bm;
+    // set a INITDLY value because the AVR manual says so (section 30.3.5)
+    // (delay 1st reading until Vref is stable)
+    ADC0.CTRLD |= ADC_INITDLY_DLY16_gc;
     // put the ADC in temperature mode
     // attiny1616 datasheet section 30.3.2.6
     mcu_set_adc0_vref(VREF_ADC0REFSEL_1V1_gc);  // Set Vbg ref to 1.1V

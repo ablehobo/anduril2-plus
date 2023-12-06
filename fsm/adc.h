@@ -105,8 +105,7 @@ static void ADC_temperature_handler();
 #endif  // ifdef USE_THERMAL_REGULATION
 
 
-//inline void ADC_on();
-#define ADC_on   adc_voltage_mode
+inline void ADC_on();
 //inline void ADC_off();
 #define ADC_off  mcu_adc_off
 //inline void ADC_start_measurement();
