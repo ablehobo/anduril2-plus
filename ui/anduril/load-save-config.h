@@ -124,6 +124,22 @@ Config cfg = {
         // beacon timing
         .beacon_seconds = 2,
     #endif
+    #ifdef USE_LIGHTNING_MODE
+        .lightning_busy_factor = LIGHTNING_BUSY_FACTOR,
+    #endif
+    #ifdef USE_CANDLE_MODE
+        .candle_amplitude = CANDLE_AMPLITUDE,
+        .candle_wobble_style = DEFAULT_CANDLE_WOBBLE_MODE,
+    #endif
+    #ifdef USE_FIREWORK_MODE
+        .firework_brightness = RAMP_SMOOTH_CEIL,
+    #endif
+    #ifdef USE_LIGHTHOUSE_MODE
+        .lighthouse_delay = DEFAULT_LIGHTHOUSE_DELAY,
+    #endif
+    #ifdef USE_BROKEN_FLUORESCENT_MODE
+        .fluoresent_brightness = DEFAULT_LEVEL,
+    #endif
 
     ///// voltage and temperature
 

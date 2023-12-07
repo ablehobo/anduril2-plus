@@ -94,6 +94,14 @@ uint8_t strobe_state(Event event, uint16_t arg) {
         }
         #endif
 
+        #ifdef USE_BROKEN_FLUORESCENT_MODE
+        else if (st == broken_fluorescent_mode_e) {
+            cfg.fluoresent_brightness += ramp_direction;
+            if (cfg.fluoresent_brightness < 1) cfg.fluoresent_brightness = 1;
+            else if (cfg.fluoresent_brightness > MAX_LEVEL) cfg.fluoresent_brightness = MAX_LEVEL;
+        }
+        #endif
+
         return EVENT_HANDLED;
     }
     // reverse ramp direction on hold release
@@ -135,6 +143,13 @@ uint8_t strobe_state(Event event, uint16_t arg) {
         }
         #endif
 
+        #ifdef USE_BROKEN_FLUORESCENT_MODE
+        else if (st == broken_fluorescent_mode_e) {
+            if (cfg.fluoresent_brightness > 1)
+                cfg.fluoresent_brightness--;
+        }
+        #endif
+
         return EVENT_HANDLED;
     }
     // release hold: save new strobe settings
@@ -158,6 +173,96 @@ uint8_t strobe_state(Event event, uint16_t arg) {
 
         pseudo_rand_seed += arg;
         return EVENT_HANDLED;
+    }
+    // 6C: turning down busy factor (less busy) of lightning mode,
+    //  or turning down firework brightness by 12,
+    //  or decrease lighthouse delay by 1 sec
+    else if (event == EV_6clicks) {
+        if (0) {}  // placeholder
+        #ifdef USE_LIGHTNING_MODE
+        else if (st == lightning_storm_e) {
+            cfg.lightning_busy_factor++;
+            if (cfg.lightning_busy_factor > LIGHTNING_BUSY_FACTOR_MAX)
+                cfg.lightning_busy_factor = LIGHTNING_BUSY_FACTOR_MAX;
+            save_config();
+            blink_once();
+        }
+        #endif
+        #ifdef USE_FIREWORK_MODE
+        else if (st == firework_mode_e) {
+            cfg.firework_brightness -= 12;
+            if (cfg.firework_brightness < MIN_FIREWORK_LEVEL)
+                cfg.firework_brightness = MIN_FIREWORK_LEVEL;
+            save_config();
+            blink_once();
+        }
+        #endif
+        #ifdef USE_LIGHTHOUSE_MODE
+        else if (st == lighthouse_mode_e) {
+            if (cfg.lighthouse_delay > LIGHTHOUSE_MIN_DELAY)
+                cfg.lighthouse_delay--;
+            save_config();
+            blink_once();
+        }
+        #endif
+        return EVENT_HANDLED;
+    }
+    // 7C: turning up busy factor (busier) of lightning mode,
+    //  or turning up firework brightness by 12,
+    //  or increasing lighthouse delay by 1 sec
+    else if (event == EV_7clicks) {
+        if (0) {}  // placeholder
+        #ifdef USE_LIGHTNING_MODE
+        else if (st == lightning_storm_e) {
+            cfg.lightning_busy_factor--;
+            if (cfg.lightning_busy_factor < LIGHTNING_BUSY_FACTOR_MIN)
+                cfg.lightning_busy_factor = LIGHTNING_BUSY_FACTOR_MIN;
+            save_config();
+            blink_once();
+        }
+        #endif
+        #ifdef USE_FIREWORK_MODE
+        else if (st == firework_mode_e) {
+            cfg.firework_brightness += 12;
+            if (cfg.firework_brightness > MAX_LEVEL)
+                cfg.firework_brightness = MAX_LEVEL;
+            save_config();
+            blink_once();
+        }
+        #endif
+        #ifdef USE_LIGHTHOUSE_MODE
+        else if (st == lighthouse_mode_e) {
+            if (cfg.lighthouse_delay < LIGHTHOUSE_MAX_DELAY)
+                cfg.lighthouse_delay++;
+            save_config();
+            blink_once();
+        }
+        #endif
+        return EVENT_HANDLED;
+    }
+    // 8C: reset lightning busy factor to default,
+    //  or reset firework brightness to default
+    //  or reset lighthouse delay to default
+    else if (event == EV_8clicks) {
+        if (0) {}  // placeholder
+        #ifdef USE_LIGHTNING_MODE
+        else if (st == lightning_storm_e) {
+            cfg.lightning_busy_factor = LIGHTNING_BUSY_FACTOR;
+            save_config();
+            blink_once();
+        }
+        #endif
+        #ifdef USE_FIREWORK_MODE
+        else if (st == firework_mode_e) {
+            cfg.firework_brightness = RAMP_SMOOTH_CEIL;
+        }
+        #endif
+        #ifdef USE_LIGHTHOUSE_MODE
+        else if (st == lighthouse_mode_e) {
+            cfg.lighthouse_delay = DEFAULT_LIGHTHOUSE_DELAY;
+        }
+        #endif
+        return MISCHIEF_MANAGED;
     }
     #endif
     return EVENT_NOT_HANDLED;
@@ -199,6 +304,24 @@ inline void strobe_state_iter() {
         #ifdef USE_BIKE_FLASHER_MODE
         case bike_flasher_e:
             bike_flasher_iter();
+            break;
+        #endif
+
+        #ifdef USE_FIREWORK_MODE
+        case firework_mode_e:
+            firework_iter();
+            break;
+        #endif
+
+        #ifdef USE_LIGHTHOUSE_MODE
+        case lighthouse_mode_e:
+            lighthouse_iter();
+            break;
+        #endif
+
+        #ifdef USE_BROKEN_FLUORESCENT_MODE
+        case broken_fluorescent_mode_e:
+            bad_fluorescent_iter();
             break;
         #endif
     }
@@ -293,9 +416,9 @@ inline void lightning_storm_iter() {
     }
 
     // turn the emitter off,
-    // for a random amount of time between 1ms and 8192ms
+    // for a random amount of time between 1ms and 8192ms (default busy factor)
     // (with a low bias)
-    rand_time = 1 << (pseudo_rand() % 13);
+    rand_time = 1 << (pseudo_rand() % cfg.lightning_busy_factor);
     rand_time += pseudo_rand() % rand_time;
     set_level(0);
     nice_delay_ms(rand_time);  // no return check necessary on final delay
@@ -318,6 +441,87 @@ inline void bike_flasher_iter() {
     }
     nice_delay_ms(720);  // no return check necessary on final delay
     set_level(0);
+}
+#endif
+
+#ifdef USE_FIREWORK_MODE
+#define FIREWORK_DEFAULT_STAGE_COUNT 64
+#define FIREWORK_DEFAULT_INTERVAL (2500/FIREWORK_DEFAULT_STAGE_COUNT)
+uint8_t firework_stage = 0;
+uint8_t firework_stage_count = FIREWORK_DEFAULT_STAGE_COUNT;
+uint8_t step_interval = FIREWORK_DEFAULT_INTERVAL;
+
+// code is copied and modified from factory-reset.c
+inline void firework_iter() {
+    if (firework_stage == firework_stage_count) {        
+        // explode, and reset stage
+        firework_stage = 0;
+        for (uint8_t brightness = cfg.firework_brightness; brightness > 0; brightness--) {
+            set_level(brightness);
+            nice_delay_ms(step_interval/4);
+            set_level((uint16_t)brightness*7/8);
+            nice_delay_ms(step_interval/(1+(pseudo_rand()%5)));
+        }
+        // off for 1 to 5 seconds
+        set_level(0);
+        nice_delay_ms(1000 + (pseudo_rand() % 5) * 1000);
+        // set next stage count (16 to 64 in increment of 8)
+        firework_stage_count = 16 + 8 * (pseudo_rand() % 7);
+        return;
+    }
+    // wind up to explode
+    set_level(firework_stage);
+    nice_delay_ms(step_interval/3);
+    set_level((uint16_t)firework_stage*2/3);
+    nice_delay_ms(step_interval/3);
+    firework_stage++;
+    // we've reached our max brightness for firework mode, let's explode in the next iteration
+    if (firework_stage > cfg.firework_brightness)
+        firework_stage = firework_stage_count;
+}
+#endif
+
+#ifdef USE_LIGHTHOUSE_MODE
+// phase is between 0~255, returns MAX_LEVEL at 128 and 1 at both ends
+uint8_t lighthouse_intensity(uint8_t phase) {
+    if (phase > 127)
+        phase = 256 - phase;
+    const uint64_t maxOutput = MAX_LEVEL - 1;
+    // power of 4 (quartic function)
+    return (uint8_t)(maxOutput * phase / 128 * phase / 128 * phase / 128 * phase / 128) + 1;
+}
+
+inline void lighthouse_iter() {
+    uint8_t brightness = lighthouse_intensity(lighthouse_phase++);
+    set_level(brightness);
+    
+    if (lighthouse_phase == 0) {
+        set_level(0);
+        nice_delay_ms(1000 * cfg.lighthouse_delay);
+    } else
+        nice_delay_ms(10 + cfg.lighthouse_delay);
+}
+#endif
+
+#ifdef USE_BROKEN_FLUORESCENT_MODE
+inline void bad_fluorescent_iter() {
+    // broken fluorescent
+    // even index: light off, odd index: light on
+    // unit: 10ms or -1 means random number (10~500ms) generated at boot
+    static const int8_t fluorescent_pattern[] = {1,4, -1,2, 5,3, -1,5, 7,27, 1,5, 3,10, -1,20, 3,-1, 2,-1, 10,-1, -1,-1, 1};
+
+    fluoresent_ramp_up_increment++;
+    if ((fluorescent_pattern[fluoresent_flicker_index] == -1 && fluoresent_ramp_up_increment == fluoresent_flicker_random) ||
+        (fluorescent_pattern[fluoresent_flicker_index] == fluoresent_ramp_up_increment)) {
+        fluoresent_flicker_index++;
+        fluoresent_ramp_up_increment = 0;
+        set_level(fluoresent_flicker_index & 1 ? cfg.fluoresent_brightness >> (pseudo_rand()&1): 0);
+    }
+    if (fluoresent_flicker_index == sizeof(fluorescent_pattern)) {
+        fluoresent_flicker_index = 0;
+        fluoresent_flicker_random = pseudo_rand()%50 + 1;
+    }
+    nice_delay_ms(10);
 }
 #endif
 

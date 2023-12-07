@@ -50,6 +50,12 @@ inline void police_color_strobe_iter();
 #endif
 
 #ifdef USE_LIGHTNING_MODE
+#ifndef LIGHTNING_BUSY_FACTOR
+#define LIGHTNING_BUSY_FACTOR 14 // max 16384ms (max ~16 sec interval)
+#endif
+
+#define LIGHTNING_BUSY_FACTOR_MAX 16 // max 65536ms (max ~65 sec interval)
+#define LIGHTNING_BUSY_FACTOR_MIN 12 // max 4096ms (max ~4 sec interval)
 inline void lightning_storm_iter();
 #endif
 
@@ -64,6 +70,26 @@ inline void lightning_storm_iter();
     #define MAX_BIKING_LEVEL 120  // should be 127 or less
     inline void bike_flasher_iter();
 #endif  // ifdef USE_BIKE_FLASHER_MODE
+
+#ifdef USE_FIREWORK_MODE
+#define MIN_FIREWORK_LEVEL DEFAULT_LEVEL // max is always MAX_LEVEL
+inline void firework_iter();
+#endif
+
+#ifdef USE_LIGHTHOUSE_MODE
+uint8_t lighthouse_phase = 0;
+#define LIGHTHOUSE_MAX_DELAY 30
+#define LIGHTHOUSE_MIN_DELAY 0
+#define DEFAULT_LIGHTHOUSE_DELAY 5
+inline void lighthouse_iter();
+#endif
+
+#ifdef USE_BROKEN_FLUORESCENT_MODE
+uint8_t fluoresent_flicker_random = 1;
+uint8_t fluoresent_flicker_index = 0;
+uint8_t fluoresent_ramp_up_increment = 0;
+inline void bad_fluorescent_iter();
+#endif
 
 #ifdef USE_CANDLE_MODE
 #include "anduril/candle-mode.h"
