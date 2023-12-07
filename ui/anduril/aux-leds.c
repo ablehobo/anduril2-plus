@@ -133,7 +133,10 @@ void rgb_led_update(uint8_t mode, uint16_t arg) {
         return;
     }
 
-    uint8_t pattern = (mode>>4);  // off, low, high, blinking, ... more?
+    uint8_t pattern = (mode>>4);  // off, low, high, blinking, breathing
+    #ifdef USE_BUTTON_LED
+    uint8_t button_pattern = pattern;
+    #endif
     uint8_t color = mode & 0x0f;
 
     // always preview in high mode
@@ -194,41 +197,65 @@ void rgb_led_update(uint8_t mode, uint16_t arg) {
     }
     #endif
 
+    // uses an odd length to avoid lining up with rainbow loop
+    static const uint8_t animation[] = {2, 1, 0, 0,  0, 0, 0, 0,  0,
+                                        1, 0, 0, 0,  0, 0, 0, 0,  0, 1};
+    static const uint8_t animation_breath[] = {0, 0, 0, 0,  0, 0, 0, 0,  0, 0, 1, 1,  2, 2,
+                                               2, 1, 1, 1,  0, 0, 0, 0,  0, 0, 0, 0,  0, 0, 0};
+    // pick a brightness from the animation sequence
+    #ifdef USE_BUTTON_LED
+    uint8_t blink_animation_done = 0;
+    #endif
+
     // pick a brightness from the animation sequence
     if (pattern == 3) {
-        // uses an odd length to avoid lining up with rainbow loop
-        static const uint8_t animation[] = {2, 1, 0, 0,  0, 0, 0, 0,  0,
-                                            1, 0, 0, 0,  0, 0, 0, 0,  0, 1};
         frame = (frame + 1) % sizeof(animation);
         pattern = animation[frame];
+        #ifdef USE_BUTTON_LED
+        blink_animation_done = 1;
+        #endif
+    } else if (pattern == 4) {
+        frame = (frame + 1) % sizeof(animation_breath);
+        pattern = animation_breath[frame];
+        #ifdef USE_BUTTON_LED
+        blink_animation_done = 1;
+        #endif
     }
-    uint8_t result;
     #ifdef USE_BUTTON_LED
-    uint8_t button_led_result;
+    if (button_pattern == 3) {
+        if (blink_animation_done) {
+            button_pattern = pattern;
+        } else {
+            frame = (frame + 1) % sizeof(animation);
+            button_pattern = animation[frame];
+        }
+    } else if (button_pattern == 4) {
+        if (blink_animation_done) {
+            button_pattern = pattern;
+        } else {
+            frame = (frame + 1) % sizeof(animation_breath);
+            button_pattern = animation_breath[frame];
+        }
+    }
     #endif
+
+    uint8_t result;
     switch (pattern) {
         case 0:  // off
             result = 0;
-            #ifdef USE_BUTTON_LED
-            button_led_result = 0;
-            #endif
             break;
         case 1:  // low
             result = actual_color;
-            #ifdef USE_BUTTON_LED
-            button_led_result = 1;
-            #endif
             break;
         default:  // high
             result = (actual_color << 1);
-            #ifdef USE_BUTTON_LED
-            button_led_result = 2;
-            #endif
             break;
     }
     rgb_led_set(result);
+
+    // separate button LED logic here because the button LED may blink while AUX LED doesn't
     #ifdef USE_BUTTON_LED
-    button_led_set(button_led_result);
+    button_led_set((button_pattern > 1) ? 2 : button_pattern);
     #endif
 }
 
