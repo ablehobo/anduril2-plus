@@ -75,7 +75,10 @@ uint8_t lockout_state(Event event, uint16_t arg) {
         #if defined(USE_INDICATOR_LED)
         indicator_led_update(cfg.indicator_led_mode >> 2, arg);
         #elif defined(USE_AUX_RGB_LEDS)
-        rgb_led_update(cfg.rgb_led_lockout_mode, arg);
+        if (voltage < VOLTAGE_RED)
+            rgb_led_update(RGB_RED|RGB_BREATH, arg);
+        else
+            rgb_led_update(cfg.rgb_led_lockout_mode, arg);
         #endif
         return EVENT_HANDLED;
     }
