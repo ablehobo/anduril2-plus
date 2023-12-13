@@ -152,7 +152,7 @@ void rgb_led_update(uint8_t mode, uint16_t arg) {
         // use high mode if regular aux level is high or prev level was high
         pattern = 1 + ((2 == pattern) | (prev_level >= POST_OFF_VOLTAGE_BRIGHTNESS));
         // voltage mode
-        color = RGB_LED_NUM_COLORS - 1;
+        color = 9;
     }
     #endif
 
