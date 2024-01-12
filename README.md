@@ -1,3 +1,10 @@
+# About this Anduril Fork
+
+I've added some new features on top of [Anduril from Toykeeper](https://github.com/ToyKeeper/anduril). I started modding the firmware from [this old repo](https://github.com/starryalley/anduril2), and then moved here. New changes/features will be updated only here.
+
+See the list of features/changes here in [docs/starryalley-mod.md](docs/starryalley-mod.md).
+
+
 # Anduril Flashlight Firmware + FSM Flashlight UI Toolkit
 
 Anduril is a user interface for flashlights.  It is written with FSM, a UI
