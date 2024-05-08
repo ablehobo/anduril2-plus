@@ -312,6 +312,31 @@ uint8_t steady_state(Event event, uint16_t arg) {
             }
         }
         #endif  // ifdef USE_SET_LEVEL_GRADUALLY
+
+        #ifdef DUAL_VOLTAGE_FLOOR
+        if (voltage > DUAL_VOLTAGE_FLOOR && voltage < VOLTAGE_RED) {
+        #else
+        if (voltage < VOLTAGE_RED) {
+        #endif
+            // turn on button and/or rgb aux briefly on high every ~3 seconds
+            arg %= (62*3);
+            if (arg == 0) {
+                #ifdef USE_BUTTON_LED
+                button_led_set(2);
+                #endif
+                #ifdef USE_AUX_RGB_LEDS
+                rgb_led_voltage_readout(1);
+                #endif
+            } else if (arg == 3) {
+                #ifdef USE_BUTTON_LED
+                button_led_set(0);
+                #endif
+                #ifdef USE_AUX_RGB_LEDS
+                rgb_led_set(0);
+                #endif
+            }
+        }
+
         return EVENT_HANDLED;
     }
 
