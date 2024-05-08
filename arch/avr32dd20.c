@@ -59,7 +59,9 @@ inline void mcu_set_admux_therm() {
     ADC0.CTRLA = ADC_CONVMODE_SINGLEENDED_gc
                | ADC_RESSEL_12BIT_gc
                | ADC_LEFTADJ_bm
-               | ADC_FREERUN_bm;
+               | ADC_FREERUN_bm
+               | ADC_RUNSTBY_bm  // allow temperature sense in standby mode
+               ;
     // set number of samples (requires adjustment in formula too)
     ADC0.CTRLB = ADC_SAMPNUM_NONE_gc;
     // accumulate more samples for more resolution
