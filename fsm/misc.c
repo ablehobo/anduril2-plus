@@ -191,6 +191,7 @@ void indicator_led_auto() {
 #ifdef USE_BUTTON_LED
 // TODO: Refactor this and RGB LED function to merge code and save space
 void button_led_set(uint8_t lvl) {
+    if (button_led_off) lvl = 0;
     switch (lvl) {
 
         // FIXME: move this logic to arch/*

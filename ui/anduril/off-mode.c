@@ -20,6 +20,9 @@ uint8_t off_state(Event event, uint16_t arg) {
     if (event == EV_enter_state) {
         // turn off
         off_state_set_level(0);
+        #ifdef USE_BUTTON_LED
+        button_led_off = 0;
+        #endif
         #ifdef USE_SMOOTH_STEPS
             // don't go to sleep while animating
             arg |= smooth_steps_in_progress;

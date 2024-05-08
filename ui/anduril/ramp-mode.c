@@ -500,6 +500,14 @@ uint8_t steady_state(Event event, uint16_t arg) {
     }
     #endif
 
+    #ifdef USE_BUTTON_LED
+    // 7C: temporarily turn off button LED. Will reset when entering off/lockout
+    else if (event == EV_7clicks) {
+        button_led_off = !button_led_off;
+        blink_once();
+    }
+    #endif
+
     #ifdef USE_RAMP_CONFIG
     // 7H: configure this ramp mode
     else if (event == EV_click7_hold) {

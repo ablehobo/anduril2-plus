@@ -43,6 +43,7 @@ void indicator_led(uint8_t lvl);
 #endif
 
 #ifdef USE_BUTTON_LED
+uint8_t button_led_off = 0;
 // lvl: 0=off, 1=low, 2=high
 void button_led_set(uint8_t lvl);
 #endif
