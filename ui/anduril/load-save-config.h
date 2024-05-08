@@ -30,6 +30,9 @@ Config cfg = {
             RAMP_DISCRETE_FLOOR,
             #ifdef USE_SIMPLE_UI
                 SIMPLE_UI_FLOOR,
+            #ifdef USE_CHILD_UI
+                CHILD_UI_FLOOR,
+            #endif
             #endif
             },
         .ramp_ceils = {
@@ -37,6 +40,9 @@ Config cfg = {
             RAMP_DISCRETE_CEIL,
             #ifdef USE_SIMPLE_UI
                 SIMPLE_UI_CEIL,
+            #ifdef USE_CHILD_UI
+                CHILD_UI_CEIL,
+            #endif
             #endif
             },
         .ramp_stepss = {
@@ -44,6 +50,9 @@ Config cfg = {
             RAMP_DISCRETE_STEPS,
             #ifdef USE_SIMPLE_UI
                 SIMPLE_UI_STEPS,
+            #ifdef USE_CHILD_UI
+                CHILD_UI_STEPS,
+            #endif
             #endif
             },
     #endif
@@ -54,6 +63,13 @@ Config cfg = {
         #ifdef USE_2C_STYLE_CONFIG
             // 0 = no turbo, 1 = A1 style, 2 = A2 style
             .ramp_2c_style_simple = DEFAULT_2C_STYLE_SIMPLE,
+        #endif
+
+        #ifdef USE_CHILD_UI
+            .child_ui_active = CHILD_UI_ACTIVE,
+            .child_ui_floor = CHILD_UI_FLOOR,
+            .child_ui_ceil = CHILD_UI_CEIL,
+            .saved_ramp_style = RAMP_STYLE,
         #endif
     #endif
 

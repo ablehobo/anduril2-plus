@@ -101,3 +101,13 @@ The blinking is in a pattern called breathing (although it's only low/high mode 
 
 For lights with the indicator LED, the indicator LED will be used. ([default behaviour](https://github.com/ToyKeeper/anduril/commit/b2f95757bde9f3e23105d7b433fc59ace0f2ae87))
 
+## Child UI (a Simple UI with limitations)
+
+Child UI (in addition to Simple and Advanced) is basically the same as Simple UI but with the following differences (limitations):
+- ramping style is fixed to 2-step discrete ramping (only low and high)
+- only ramp floor and ceil (low and high level) can be configured (by `12H` from off in advanced UI)
+- default floor and ceiling level: `SIMPLE_UI_FLOOR` and 50
+
+Enter by `12C` from off, exit by `12H` from off.
+
+Switch to this mode before handling the light to the kids.

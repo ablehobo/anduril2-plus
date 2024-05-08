@@ -37,8 +37,26 @@
 #ifndef SIMPLE_UI_STEPS
 #define SIMPLE_UI_STEPS 5
 #endif
+
+#if defined(USE_CHILD_UI)
+#ifndef CHILD_UI_ACTIVE
+#define CHILD_UI_ACTIVE 0
+#endif
+#ifndef CHILD_UI_FLOOR
+#define CHILD_UI_FLOOR SIMPLE_UI_FLOOR
+#endif
+#ifndef CHILD_UI_CEIL
+#define CHILD_UI_CEIL (RAMP_SIZE/3)
+#endif
+#ifndef CHILD_RAMP_STYLE
+#define CHILD_RAMP_STYLE 1 // always use discrete
+#endif
+#ifndef CHILD_UI_STEPS
+#define CHILD_UI_STEPS 2
+#endif
 #endif
 
+#endif
 
 // configure the timing of turning on/off in regular ramp mode
 // press: react as soon as the button is pressed
@@ -112,6 +130,9 @@ uint8_t ramp_config_state(Event event, uint16_t arg);
 void ramp_config_save(uint8_t step, uint8_t value);
 #ifdef USE_SIMPLE_UI
 uint8_t simple_ui_config_state(Event event, uint16_t arg);
+#ifdef USE_CHILD_UI
+uint8_t child_ui_config_state(Event event, uint16_t arg);
+#endif
 #endif
 #endif
 

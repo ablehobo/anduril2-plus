@@ -9,7 +9,11 @@
 #define EEPROM_OVERRIDE
 
 #ifdef USE_SIMPLE_UI
+#ifdef USE_CHILD_UI
+#define NUM_RAMPS 4
+#else
 #define NUM_RAMPS 3
+#endif
 #else
 #define NUM_RAMPS 2
 #endif
@@ -34,6 +38,12 @@ typedef struct Config {
         #ifdef USE_2C_STYLE_CONFIG
             uint8_t ramp_2c_style_simple;
         #endif
+    #ifdef USE_SIMPLE_UI
+        uint8_t child_ui_active;
+        uint8_t child_ui_floor;
+        uint8_t child_ui_ceil;
+        uint8_t saved_ramp_style;
+    #endif
     #endif
     #ifdef USE_RAMP_AFTER_MOON_CONFIG
         uint8_t dont_ramp_after_moon;

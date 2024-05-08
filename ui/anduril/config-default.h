@@ -44,6 +44,11 @@
 // Include a simplified UI for non-enthusiasts?
 #define USE_SIMPLE_UI
 
+// a child UI (more limited simple UI and lowered defaults)
+#if (ROM_SIZE > 10000)
+#define USE_CHILD_UI
+#endif
+
 
 ///// Ramp mode options /////
 
