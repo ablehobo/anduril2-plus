@@ -93,12 +93,12 @@ uint8_t voltage_to_rgb() {
 uint8_t temperature_to_rgb() {
     static const uint8_t temp_levels[] = {
     // temperature in Celsius, color
-          0, 6, // R + B => pink/purple  <=12 C
-         12, 5, //     B                 (12,16] C
-         16, 4, //   G+B => cyan         (16,20] C
-         20, 3, //   G                   (20,25] C
-         25, 2, // R+G   => yellow       (25,30] C
-         30, 1, // R                     >30 C
+          0, 6, // R + B => pink/purple  <=50 F
+         10, 5, //     B                 (50,60] F
+         16, 4, //   G+B => cyan         (60,70] F
+         21, 3, //   G                   (70,80] F
+         27, 2, // R+G   => yellow       (80,90] F
+         32, 1, // R                     >90 F
         255, 1, // R
     };
     int16_t temps = temperature;
