@@ -81,6 +81,6 @@
 
 // don't blink mid-ramp
 #ifdef BLINK_AT_RAMP_MIDDLE
-#undef BLINK_AT_RAMP_MIDDLE
+//#undef BLINK_AT_RAMP_MIDDLE
 #endif
 
