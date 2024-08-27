@@ -169,7 +169,7 @@ void rgb_led_update(uint8_t mode, uint16_t arg) {
         uint8_t speed = 0x03;  // awake speed
         if (go_to_standby) speed = RGB_RAINBOW_SPEED;  // asleep speed
         if (0 == (arg & speed)) {
-            rainbow = (rainbow + 1) % 6;
+            rainbow = (rainbow + 1) % 7;
         }
         actual_color = pgm_read_byte(colors + rainbow);
     }

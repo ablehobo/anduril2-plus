@@ -57,7 +57,7 @@ const PROGMEM uint8_t rgb_led_colors[] = {
 #ifndef RGB_LED_LOCKOUT_DEFAULT
 //#define RGB_LED_LOCKOUT_DEFAULT 0x39  // blinking, voltage
 //#define RGB_LED_LOCKOUT_DEFAULT 0x37  // blinking, disco
-#define RGB_LED_LOCKOUT_DEFAULT 0x17 //low, disco
+#define RGB_LED_LOCKOUT_DEFAULT 0x48 //breath, rainbow
 #endif
 #ifndef RGB_RAINBOW_SPEED
 #define RGB_RAINBOW_SPEED 0x80  // change color every 128 frames
