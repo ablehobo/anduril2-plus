@@ -128,6 +128,19 @@ uint8_t lockout_state(Event event, uint16_t arg) {
         return EVENT_HANDLED;
     }
 
+        // 5 clicks and hold: momentary turbo
+    else if (event == EV_click5_hold) {
+        // Set to maximum level (turbo) when the button is held
+        set_level(MAX_LEVEL);
+        return EVENT_HANDLED;
+    }
+    // Release after 5 clicks and hold: return to lockout
+    else if (event == EV_click5_hold_release) {
+        // Turn off the light and return to lockout mode
+        set_level(0);
+        return EVENT_HANDLED;
+    }
+
     #if NUM_CHANNEL_MODES > 1
     // 3H: next channel mode
     else if (event == EV_click3_hold) {
