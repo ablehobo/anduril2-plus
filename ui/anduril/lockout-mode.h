@@ -9,7 +9,7 @@ uint8_t lockout_state(Event event, uint16_t arg);
 
 #ifdef USE_AUTOLOCK
 #ifndef DEFAULT_AUTOLOCK_TIME
-#define DEFAULT_AUTOLOCK_TIME 0 // autolock time in minutes, 0 = disabled
+#define DEFAULT_AUTOLOCK_TIME 2 // autolock time in minutes, 0 = disabled
 #endif
 uint8_t autolock_config_state(Event event, uint16_t arg);
 #endif
