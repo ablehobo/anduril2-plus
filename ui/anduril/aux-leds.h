@@ -60,7 +60,7 @@ const PROGMEM uint8_t rgb_led_colors[] = {
 #define RGB_LED_LOCKOUT_DEFAULT 0x17 //low, disco
 #endif
 #ifndef RGB_RAINBOW_SPEED
-#define RGB_RAINBOW_SPEED 0x40  // change color every 64 frames
+#define RGB_RAINBOW_SPEED 0x80  // change color every 128 frames
 #endif
 #endif
 
