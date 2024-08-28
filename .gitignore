@@ -19,3 +19,4 @@ venv/
 *.old
 *.otl
 .vscode/c_cpp_properties.json
+.VSCodeCounter/
