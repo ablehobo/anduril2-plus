@@ -341,6 +341,7 @@ void loop() {
     #ifdef USE_THERMAL_REGULATION
     // TODO: blink out therm_ceil during thermal_config_state?
     else if (state == tempcheck_state) {
+        temperature = temperature * 9 / 5 + 32;  // convert to F
         blink_num(temperature);
         nice_delay_ms(1000);
     }
