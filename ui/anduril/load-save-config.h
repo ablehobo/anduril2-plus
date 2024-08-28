@@ -166,7 +166,7 @@ Config cfg = {
     #endif
     #ifdef USE_THERMAL_REGULATION
         .therm_ceil = DEFAULT_THERM_CEIL,
-        .therm_cal_offset = -5,
+        .therm_cal_offset = -3,
     #endif
 
     ///// aux LEDs
