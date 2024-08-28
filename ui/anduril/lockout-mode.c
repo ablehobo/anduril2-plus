@@ -122,10 +122,10 @@ uint8_t lockout_state(Event event, uint16_t arg) {
         return EVENT_HANDLED;
     }
 
-    // 5 clicks: exit and turn on at ceiling level
+    // 5 clicks: exit and turn on at mid level
     else if (event == EV_5clicks) {
         //set_state(steady_state, MAX_LEVEL);
-        off_state_set_level(75);
+        set_state(steady_state, 75);
         return EVENT_HANDLED;
     }
 
@@ -135,6 +135,7 @@ uint8_t lockout_state(Event event, uint16_t arg) {
         // Set to middle level (75/150) when the button is held
         //set_level(steady_state, 75);
         off_state_set_level(75);
+        //off_state_set_level(memorized_level);
         return EVENT_HANDLED;
     }
     // Release after 5 clicks and hold: return to lockout
