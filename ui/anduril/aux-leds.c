@@ -166,10 +166,10 @@ void rgb_led_update(uint8_t mode, uint16_t arg) {
         actual_color = pgm_read_byte(colors + rainbow);
     }
     else if (color == 8) {  // rainbow
-        uint8_t speed = 0x00;  // awake speed
+        uint8_t speed = 0x03;  // awake speed
         if (go_to_standby) speed = RGB_RAINBOW_SPEED;  // asleep speed
         if (0 == (arg & speed)) {
-            rainbow = (rainbow + 1) % 7;
+            rainbow = (rainbow + 1) % 6;
         }
         actual_color = pgm_read_byte(colors + rainbow);
     }
@@ -184,6 +184,15 @@ void rgb_led_update(uint8_t mode, uint16_t arg) {
             actual_color = pgm_read_byte(colors + (((arg>>1) % 3) << 1));
         }
     }
+    else if (color == 11) {  // splat
+        uint8_t speed = 0x01;  // awake speed
+        if (go_to_standby) speed = RGB_PULSE_SPEED;  // asleep speed
+        if (0 == (arg & speed)) {
+            rainbow = (rainbow + 1) % 7;
+        }
+        actual_color = pgm_read_byte(colors + rainbow);
+    }
+
     #ifdef USE_THERMAL_REGULATION
     else {   // temperature
         actual_color = temperature_to_rgb();

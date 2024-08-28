@@ -49,7 +49,7 @@ const PROGMEM uint8_t rgb_led_colors[] = {
 };
 // intentionally 1 higher than total modes, to make "voltage" easier to reach
 // (at Hank's request)
-#define RGB_LED_NUM_COLORS 11
+#define RGB_LED_NUM_COLORS 12
 #define RGB_LED_NUM_PATTERNS 6
 #ifndef RGB_LED_OFF_DEFAULT
 #define RGB_LED_OFF_DEFAULT 0x4A  // breath, temperature
@@ -58,10 +58,11 @@ const PROGMEM uint8_t rgb_led_colors[] = {
 #ifndef RGB_LED_LOCKOUT_DEFAULT
 //#define RGB_LED_LOCKOUT_DEFAULT 0x39  // blinking, voltage
 //#define RGB_LED_LOCKOUT_DEFAULT 0x37  // blinking, disco
-#define RGB_LED_LOCKOUT_DEFAULT 0x58 //pulse, rainbow
+#define RGB_LED_LOCKOUT_DEFAULT 0x5B //pulse, splat
 #endif
 #ifndef RGB_RAINBOW_SPEED
-#define RGB_RAINBOW_SPEED 0x04  // change color every 4 frames
+#define RGB_RAINBOW_SPEED 0x0F  // change color every 16 frames
+#define RGB_PULSE_SPEED 0x04  //change every 4 frames
 #endif
 #endif
 
