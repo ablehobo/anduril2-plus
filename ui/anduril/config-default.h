@@ -223,6 +223,6 @@
 // (but allow disabling this feature per build)
 #define USE_CHANNEL_PER_STROBE
 
-#define MOMENTARY_MID_FROM_LOCKOUT
-#define MOMENTARY_TURBO_FROM_LOCKOUT
+#define MOMENTARY_MID_FROM_LOCKOUT //enable momentary mid from lockout by 5H
+#define MOMENTARY_TURBO_FROM_LOCKOUT //enable momentary turbo from lockout by 6H
 
