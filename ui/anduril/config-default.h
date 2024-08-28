@@ -223,3 +223,6 @@
 // (but allow disabling this feature per build)
 #define USE_CHANNEL_PER_STROBE
 
+#define MOMENTARY_MID_FROM_LOCKOUT
+#define MOMENTARY_TURBO_FROM_LOCKOUT
+
