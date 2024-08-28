@@ -129,7 +129,7 @@ void blink_digit_in_morse(uint8_t digit, uint8_t level) {
 }
 
 uint8_t blink_num(uint8_t num) {
-    uint8_t level = 25; // Replace with appropriate level if needed
+    uint8_t level = 15; // Replace with appropriate level if needed
 
     uint8_t hundreds = num / 100;
     num = num % 100;
