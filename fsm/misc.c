@@ -90,29 +90,60 @@ uint8_t blink_big_num(uint16_t num) {
 }
 #endif
 #ifdef USE_BLINK_NUM
+
+void morse_blink(char *morse_code, uint8_t level) {
+    #define DIT_LENGTH 200
+    for (char *p = morse_code; *p; p++) {
+        if (*p == '.') {
+            set_level(level);
+            nice_delay_ms(DIT_LENGTH);
+            set_level(0);
+        } else if (*p == '-') {
+            set_level(level);
+            nice_delay_ms(DIT_LENGTH * 3);
+            set_level(0);
+        }
+        // Space between elements of the same letter
+        nice_delay_ms(DIT_LENGTH);
+    }
+    // Space between letters
+    nice_delay_ms(DIT_LENGTH * 2);
+}
+
+void blink_digit_in_morse(uint8_t digit, uint8_t level) {
+    // Define the Morse code for each digit
+    static const char *morse_map[] = {
+        "-----",  // 0
+        ".----",  // 1
+        "..---",  // 2
+        "...--",  // 3
+        "....-",  // 4
+        ".....",  // 5
+        "-....",  // 6
+        "--...",  // 7
+        "---..",  // 8
+        "----."   // 9
+    };
+
+    morse_blink((char *)morse_map[digit], level);
+}
+
 uint8_t blink_num(uint8_t num) {
-    #if 1
+    uint8_t level = 25; // Replace with appropriate level if needed
+
     uint8_t hundreds = num / 100;
     num = num % 100;
     uint8_t tens = num / 10;
     num = num % 10;
-    #else  // can be smaller or larger, depending on whether divmod is used elsewhere
-    uint8_t hundreds = 0;
-    uint8_t tens = 0;
-    for(; num >= 100; hundreds ++, num -= 100);
-    for(; num >= 10; tens ++, num -= 10);
-    #endif
 
-    #if 0
-    // wait a moment in the dark before starting
-    set_level(0);
-    nice_delay_ms(200);
-    #endif
+    if (hundreds) blink_digit_in_morse(hundreds, level);
+    if (hundreds || tens) blink_digit_in_morse(tens, level);
+    blink_digit_in_morse(num, level);
 
-    if (hundreds) blink_digit(hundreds);
-    if (hundreds || tens) blink_digit(tens);
-    return blink_digit(num);
+    // Return the last processed digit, which in this case is `num`
+    return num;
 }
+
 #endif
 
 #ifdef USE_INDICATOR_LED
