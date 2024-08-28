@@ -124,22 +124,51 @@ uint8_t lockout_state(Event event, uint16_t arg) {
 
     // 5 clicks: exit and turn on at ceiling level
     else if (event == EV_5clicks) {
-        set_state(steady_state, MAX_LEVEL);
+        //set_state(steady_state, MAX_LEVEL);
+        off_state_set_level(75);
         return EVENT_HANDLED;
     }
 
-        // 5 clicks and hold: momentary turbo
+    #if defined (MOMENTARY_MID_FROM_LOCKOUT)
+        // 5 clicks and hold: momentary mid
     else if (event == EV_click5_hold) {
-        // Set to maximum level (turbo) when the button is held
-        set_level(MAX_LEVEL);
+        // Set to middle level (75/150) when the button is held
+        //set_level(steady_state, 75);
+        off_state_set_level(75);
         return EVENT_HANDLED;
     }
     // Release after 5 clicks and hold: return to lockout
     else if (event == EV_click5_hold_release) {
         // Turn off the light and return to lockout mode
-        set_level(0);
+        //set_level(0);
+        off_state_set_level(0);
         return EVENT_HANDLED;
     }
+    #endif
+
+    #if defined (MOMENTARY_TURBO_FROM_LOCKOUT)
+    // 6 clicks: exit and turn on at ceiling level
+    else if (event == EV_6clicks) {
+        //set_state(steady_state, MAX_LEVEL);
+        off_state_set_level(MAX_LEVEL);
+        return EVENT_HANDLED;
+    }
+
+        // 5 clicks and hold: momentary turbo
+    else if (event == EV_click6_hold) {
+        // Set to maximum level (turbo) when the button is held
+        //set_level(MAX_LEVEL);
+        off_state_set_level(MAX_LEVEL);
+        return EVENT_HANDLED;
+    }
+    // Release after 6 clicks and hold: return to lockout
+    else if (event == EV_click6_hold_release) {
+        // Turn off the light and return to lockout mode
+        //set_level(0);
+        off_state_set_level(0);
+        return EVENT_HANDLED;
+    }
+    #endif
 
     #if NUM_CHANNEL_MODES > 1
     // 3H: next channel mode
