@@ -44,8 +44,8 @@
 // * 4. both channels, auto blend, reversible
 #define NUM_CHANNEL_MODES   (5 + NUM_RGB_AUX_CHANNEL_MODES)
 enum channel_modes_e {
-    CM_CH1 = 0,
-    CM_CH2,
+    CM_CH2 = 0,
+    CM_CH1,
     CM_BOTH,
     CM_BLEND,
     CM_AUTO,
