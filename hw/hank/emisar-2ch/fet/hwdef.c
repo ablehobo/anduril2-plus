@@ -23,14 +23,14 @@ bool gradual_tick_auto(uint8_t gt);
 
 
 Channel channels[] = {
-    { // channel 1 only
-        .set_level    = set_level_ch1,
-        .gradual_tick = gradual_tick_ch1,
-        .has_args     = 0
-    },
     { // channel 2 only
         .set_level    = set_level_ch2,
         .gradual_tick = gradual_tick_ch2,
+        .has_args     = 0
+    },
+    { // channel 1 only
+        .set_level    = set_level_ch1,
+        .gradual_tick = gradual_tick_ch1,
         .has_args     = 0
     },
     { // both channels, tied together (max "200%" power)
