@@ -201,5 +201,9 @@ Config cfg = {
         .jump_start_level = DEFAULT_JUMP_START_LEVEL,
     #endif
 
+    #ifdef NUM_MODE
+        .num_mode = NUM_MODE,
+    #endif
+
 };
 
