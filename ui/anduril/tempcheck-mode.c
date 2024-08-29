@@ -41,8 +41,13 @@ void thermal_config_save(uint8_t step, uint8_t value) {
         }
 
         // item 2: set maximum heat limit
-        else {
+        else if (step == 2) {
             cfg.therm_ceil = 30 + value - 1;
+        }
+
+        // item 3: toggle temperature unit (Celsius or Fahrenheit)
+        else if (step == 3) {
+            cfg.temp_unit = value;  // 1 for °C, 2 for °F
         }
     }
 
@@ -51,6 +56,6 @@ void thermal_config_save(uint8_t step, uint8_t value) {
 
 uint8_t thermal_config_state(Event event, uint16_t arg) {
     return config_state_base(event, arg,
-                             2, thermal_config_save);
+                             3, thermal_config_save);  // 3 steps now
 }
 

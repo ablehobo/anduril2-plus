@@ -48,6 +48,10 @@ void factory_reset() {
         thermal_config_save(1, 21);
         #endif
 
+        #if defined(DEFAULT_TEMP_UNIT)
+        thermal_config_save(3, DEFAULT_TEMP_UNIT);
+        #endif
+
         // save all settings to eeprom
         // (assuming they're all at default because we haven't loaded them yet)
         save_config();

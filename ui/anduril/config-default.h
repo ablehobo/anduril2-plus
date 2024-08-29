@@ -20,6 +20,10 @@
 
 // overheat protection
 #define USE_THERMAL_REGULATION
+
+// Default value for temperature unit (0 = Celsius, 1 = Fahrenheit)
+#define DEFAULT_TEMP_UNIT 2  // Default to Fahrenheit
+
 #if (MCU==0x85) || (MCU==0x1634)
 // sloppy temperature sensor needs bigger error margin
 #define DEFAULT_THERM_CEIL 45  // try not to get hotter than this (in C)
