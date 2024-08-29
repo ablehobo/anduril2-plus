@@ -80,6 +80,8 @@
 
 // add runtime option for whether hold-from-off should ramp or stay at moon
 #define USE_RAMP_AFTER_MOON_CONFIG
+// default to NOT ramp after moon mode
+#define DEFAULT_RAMP_AFTER_MOON 1
 
 // short blip when crossing from "click" to "hold" from off
 // (helps the user hit moon mode exactly, instead of holding too long

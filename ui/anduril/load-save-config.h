@@ -209,5 +209,8 @@ Config cfg = {
         .temp_unit = DEFAULT_TEMP_UNIT,
     #endif
 
+    #ifdef DEFAULT_RAMP_AFTER_MOON
+        .dont_ramp_after_moon = DEFAULT_RAMP_AFTER_MOON,
+    #endif
 };
 
