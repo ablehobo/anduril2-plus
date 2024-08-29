@@ -234,4 +234,3 @@
 
 #define MOMENTARY_MID_FROM_LOCKOUT //enable momentary mid from lockout by 5H
 #define MOMENTARY_TURBO_FROM_LOCKOUT //enable momentary turbo from lockout by 6H
-

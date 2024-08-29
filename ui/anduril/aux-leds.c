@@ -117,6 +117,7 @@ uint8_t temperature_to_rgb() {
 void rgb_led_update(uint8_t mode, uint16_t arg) {
     static uint8_t rainbow = 0;  // track state of rainbow mode
     static uint8_t frame = 0;  // track state of animation mode
+    static uint8_t spin_step = 0;  // track state of spinning RGB mode
 
     // turn off aux LEDs when battery is empty
     // (but if voltage==0, that means we just booted and don't know yet)
@@ -192,6 +193,31 @@ void rgb_led_update(uint8_t mode, uint16_t arg) {
         }
         actual_color = pgm_read_byte(colors + rainbow);
     }
+#ifdef RGB_SPIN
+// Handle the spinning RGB pattern
+else if (color == RGB_SPIN) { //rgb spin
+    static uint8_t custom_speed_counter = 0;
+    uint8_t desired_speed = 2;  // Set this to control how many ticks before advancing
+    
+    custom_speed_counter++;
+    if (custom_speed_counter >= desired_speed) {
+        spin_step = (spin_step + 1) % 3;  // cycle through 0, 1, 2
+        custom_speed_counter = 0;
+    }
+    
+    switch (spin_step) {
+        case 0:
+            actual_color = pgm_read_byte(rgb_led_colors + 5);  // Blue
+            break;
+        case 1:
+            actual_color = pgm_read_byte(rgb_led_colors + 1);  // Red
+            break;
+        case 2:
+            actual_color = pgm_read_byte(rgb_led_colors + 3);  // Green
+            break;
+    }
+}
+#endif
 
     #ifdef USE_THERMAL_REGULATION
     else {   // temperature

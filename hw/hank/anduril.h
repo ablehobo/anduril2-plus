@@ -12,7 +12,7 @@
 #undef RGB_LED_OFF_DEFAULT
 #endif
 //#define RGB_LED_OFF_DEFAULT 0x18  // low, rainbow
-#define RGB_LED_OFF_DEFAULT 0x4A  // breath, temperature
+#define RGB_LED_OFF_DEFAULT 0x2C  // breath, temperature
 
 // half a second per color in rainbow mode
 //#define RGB_RAINBOW_SPEED 0x03
@@ -29,3 +29,5 @@
 // for consistency with KR4 (not otherwise necessary though)
 #define USE_SOFT_FACTORY_RESET
 
+#define RGB_SPIN 12 //enable RGB spin mode by 7H
+//#undef RGB_SPIN //disable RGB spin mode

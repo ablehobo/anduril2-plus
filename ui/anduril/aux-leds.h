@@ -49,7 +49,11 @@ const PROGMEM uint8_t rgb_led_colors[] = {
 };
 // intentionally 1 higher than total modes, to make "voltage" easier to reach
 // (at Hank's request)
+#ifdef RGB_SPIN
+#define RGB_LED_NUM_COLORS 13
+#else
 #define RGB_LED_NUM_COLORS 12
+#endif
 #define RGB_LED_NUM_PATTERNS 6
 #ifndef RGB_LED_OFF_DEFAULT
 #define RGB_LED_OFF_DEFAULT 0x4A  // breath, temperature
