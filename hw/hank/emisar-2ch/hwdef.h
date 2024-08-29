@@ -44,8 +44,8 @@
 // * 4. both channels, auto blend, reversible
 #define NUM_CHANNEL_MODES   (5 + NUM_RGB_AUX_CHANNEL_MODES)
 enum channel_modes_e {
-    CM_CH2 = 0,
-    CM_CH1,
+    CM_CH1 = 0,
+    CM_CH2,
     CM_BOTH,
     CM_BLEND,
     CM_AUTO,
@@ -78,16 +78,16 @@ enum channel_modes_e {
 #define PWM_CNT       TCNT1  // for dynamic PWM, reset phase
 
 // main LEDs, linear
-#define CH1_PIN  PB3            // pin 16, Opamp reference
-#define CH1_PWM  OCR1A          // OCR1A is the output compare register for PB3
-#define CH1_ENABLE_PIN   PA0    // pin 7, Opamp power
-#define CH1_ENABLE_PORT  PORTA  // control port for PA0
+#define CH1_PIN  PA6            // was PB3, now PA6 (CH2's original pin)
+#define CH1_PWM  OCR1B          // was OCR1A, now OCR1B (CH2's original PWM register)
+#define CH1_ENABLE_PIN   PA1    // was PA0, now PA1 (CH2's original enable pin)
+#define CH1_ENABLE_PORT  PORTA  // same as CH2's port
 
 // 2nd LEDs, linear
-#define CH2_PIN  PA6            // pin 1, 2nd LED Opamp reference
-#define CH2_PWM  OCR1B          // OCR1B is the output compare register for PA6
-#define CH2_ENABLE_PIN   PA1    // pin 6, Opamp power
-#define CH2_ENABLE_PORT  PORTA  // control port for PA1
+#define CH2_PIN  PB3            // was PA6, now PB3 (CH1's original pin)
+#define CH2_PWM  OCR1A          // was OCR1B, now OCR1A (CH1's original PWM register)
+#define CH2_ENABLE_PIN   PA0    // was PA1, now PA0 (CH1's original enable pin)
+#define CH2_ENABLE_PORT  PORTA  // same as CH1's port
 
 // main LEDs, DD FET
 //#define CH3_PIN  PC0            // pin 15, DD FET PWM
