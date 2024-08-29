@@ -92,7 +92,7 @@
 #define BLINK_BRIGHTNESS 40
 #define BLINK_ONCE_TIME 12  // longer blink, since main LEDs are slow
 
-#define THERM_CAL_OFFSET 5
+#define THERM_CAL_OFFSET 11
 
 // don't blink while ramping
 #ifdef BLINK_AT_RAMP_MIDDLE
