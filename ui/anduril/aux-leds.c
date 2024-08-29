@@ -117,7 +117,9 @@ uint8_t temperature_to_rgb() {
 void rgb_led_update(uint8_t mode, uint16_t arg) {
     static uint8_t rainbow = 0;  // track state of rainbow mode
     static uint8_t frame = 0;  // track state of animation mode
-    static uint8_t spin_step = 0;  // track state of spinning RGB mode
+    #ifdef RGB_SPIN
+        static uint8_t spin_step = 0;  // track state of spinning RGB mode
+    #endif
 
     // turn off aux LEDs when battery is empty
     // (but if voltage==0, that means we just booted and don't know yet)
