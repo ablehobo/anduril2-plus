@@ -205,5 +205,9 @@ Config cfg = {
         .num_mode = NUM_MODE,
     #endif
 
+    #ifdef DEFAULT_TEMP_UNIT
+        .temp_unit = DEFAULT_TEMP_UNIT,
+    #endif
+
 };
 
