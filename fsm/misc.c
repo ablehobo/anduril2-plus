@@ -129,7 +129,7 @@ void blink_digit_in_morse(uint8_t digit, uint8_t level) {
 }
 
 uint8_t blink_num(uint8_t num) {
-    uint8_t level = 15; // Replace with appropriate level if needed
+    uint8_t level = 15; //  TODO: make this configurable under 9H
 
     // Check the value of cfg.num_mode
     if (cfg.num_mode == 1) {
