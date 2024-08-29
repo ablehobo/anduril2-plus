@@ -131,18 +131,36 @@ void blink_digit_in_morse(uint8_t digit, uint8_t level) {
 uint8_t blink_num(uint8_t num) {
     uint8_t level = 15; // Replace with appropriate level if needed
 
-    uint8_t hundreds = num / 100;
-    num = num % 100;
-    uint8_t tens = num / 10;
-    num = num % 10;
+    // Check the value of cfg.num_mode
+    if (cfg.num_mode == 1) {
+        // Original decimal blinking functionality
+        uint8_t hundreds = num / 100;
+        num = num % 100;
+        uint8_t tens = num / 10;
+        num = num % 10;
 
-    if (hundreds) blink_digit_in_morse(hundreds, level);
-    if (hundreds || tens) blink_digit_in_morse(tens, level);
-    blink_digit_in_morse(num, level);
+        if (hundreds) blink_digit(hundreds);
+        if (hundreds || tens) blink_digit(tens);
+        return blink_digit(num);
+    } 
+    else if (cfg.num_mode == 2) {
+        // Morse code blinking functionality
+        uint8_t hundreds = num / 100;
+        num = num % 100;
+        uint8_t tens = num / 10;
+        num = num % 10;
 
-    // Return the last processed digit, which in this case is `num`
-    return num;
+        if (hundreds) blink_digit_in_morse(hundreds, level);
+        if (hundreds || tens) blink_digit_in_morse(tens, level);
+        blink_digit_in_morse(num, level);
+        
+        // Return the last digit or another appropriate value
+        return num;
+    }
+
+    return 0; // Default return value (if cfg.num_mode is not 1 or 2)
 }
+
 
 #endif
 

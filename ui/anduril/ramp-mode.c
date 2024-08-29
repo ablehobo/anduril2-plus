@@ -5,6 +5,7 @@
 #pragma once
 
 #include "anduril/ramp-mode.h"
+#include "anduril/globals-config.h"
 
 #ifdef USE_SUNSET_TIMER
 #include "anduril/sunset-timer.h"
@@ -661,24 +662,6 @@ uint8_t ramp_extras_config_state(Event event, uint16_t arg) {
     return config_state_base(event, arg,
         ramp_extras_config_num_steps - 1,
         ramp_extras_config_save);
-}
-#endif
-
-#ifdef USE_GLOBALS_CONFIG
-void globals_config_save(uint8_t step, uint8_t value) {
-    if (0) {}
-    #if defined(USE_CHANNEL_MODE_ARGS) && defined(USE_STEPPED_TINT_RAMPING)
-    else if (step == tint_style_config_step) { cfg.tint_ramp_style = value; }
-    #endif
-    #ifdef USE_JUMP_START
-    else if (step == jump_start_config_step) { cfg.jump_start_level = value; }
-    #endif
-}
-
-uint8_t globals_config_state(Event event, uint16_t arg) {
-    return config_state_base(event, arg,
-        globals_config_num_steps - 1,
-        globals_config_save);
 }
 #endif
 

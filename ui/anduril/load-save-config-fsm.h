@@ -145,6 +145,11 @@ typedef struct Config {
         uint8_t tactical_levels[3];
     #endif
 
+    ///// Number Format
+    #ifdef NUM_MODE
+        uint8_t num_mode;
+    #endif
+
     ///// hardware config / globals menu
     #ifdef USE_JUMP_START
         uint8_t jump_start_level;

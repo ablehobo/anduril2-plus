@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include "anduril/globals-config.h"  // Include the header file containing the enum definition
+
 #ifndef RAMP_SIZE
 #define RAMP_SIZE 150  // default, if not overridden in a driver cfg file
 #endif
@@ -226,21 +228,5 @@ typedef enum {
     #endif
     ramp_extras_config_num_steps
 } ramp_extras_config_steps_e;
-#endif
-
-#ifdef USE_GLOBALS_CONFIG
-typedef enum {
-    globals_cfg_zero = 0,
-    #if defined(USE_CHANNEL_MODE_ARGS) && defined(USE_STEPPED_TINT_RAMPING)
-    tint_style_config_step,
-    #endif
-    #ifdef USE_JUMP_START
-    jump_start_config_step,
-    #endif
-    globals_config_num_steps
-} globals_config_steps_e;
-
-void globals_config_save(uint8_t step, uint8_t value);
-uint8_t globals_config_state(Event event, uint16_t arg);
 #endif
 

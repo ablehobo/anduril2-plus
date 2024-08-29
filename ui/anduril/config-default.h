@@ -21,8 +21,13 @@
 // overheat protection
 #define USE_THERMAL_REGULATION
 
-// Default value for temperature unit (0 = Celsius, 1 = Fahrenheit)
+// Default value for temperature unit (1 = Celsius, 2 = Fahrenheit)
 #define DEFAULT_TEMP_UNIT 2  // Default to Fahrenheit
+
+#define USE_GLOBALS_CONFIG
+
+// Default number output mode (1 = Digits, 2 = Morse Code)
+#define NUM_MODE 1  // Default to Digits
 
 #if (MCU==0x85) || (MCU==0x1634)
 // sloppy temperature sensor needs bigger error margin

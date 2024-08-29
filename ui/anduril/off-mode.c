@@ -5,6 +5,7 @@
 #pragma once
 
 #include "anduril/off-mode.h"
+#include "anduril/globals-config.h"  // Include the header file containing the enum definition and globals_config_save function
 
 #ifdef USE_SUNSET_TIMER
 #include "anduril/sunset-timer.h"

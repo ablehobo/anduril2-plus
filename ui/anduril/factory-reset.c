@@ -5,6 +5,7 @@
 #pragma once
 
 #include "anduril/factory-reset.h"
+#include "anduril/globals-config.h"  // Include the header file containing the enum definition and globals_config_save function
 
 // allows setting channel mode per animation stage,
 // so it can ramp up in red then explode in white (as one example)
@@ -50,6 +51,11 @@ void factory_reset() {
 
         #if defined(DEFAULT_TEMP_UNIT)
         thermal_config_save(3, DEFAULT_TEMP_UNIT);
+        #endif
+
+        // Reset number output mode
+        #if defined(NUM_MODE)
+        globals_config_save(num_mode_config_step, NUM_MODE);
         #endif
 
         // save all settings to eeprom

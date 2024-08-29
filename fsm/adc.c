@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include "anduril/globals-config.h"  // Include the header file containing the enum definition and globals_config_save function
+
 // override onboard temperature sensor definition, if relevant
 #ifdef USE_EXTERNAL_TEMP_SENSOR
 #ifdef ADMUX_THERM
