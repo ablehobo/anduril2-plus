@@ -95,7 +95,7 @@ void battcheck();
 #define THERM_CAL_OFFSET 0
 #endif
 // temperature now, in C (ish)
-int16_t temperature;
+//int16_t temperature;
 #ifdef USE_CFG
     #define TH_CEIL cfg.therm_ceil
     #define TH_CAL cfg.therm_cal_offset
@@ -107,6 +107,10 @@ int16_t temperature;
 #endif
 static void ADC_temperature_handler();
 #endif  // ifdef USE_THERMAL_REGULATION
+
+#if defined(USE_THERMAL_REGULATION) || defined (USE_TEMP_CHECK)
+    int16_t temperature;
+#endif
 
 
 inline void ADC_on();

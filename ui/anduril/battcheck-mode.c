@@ -21,7 +21,7 @@ uint8_t battcheck_state(Event event, uint16_t arg) {
 
     // 2 clicks: next blinky mode
     else if (event == EV_2clicks) {
-        #if defined(USE_THERMAL_REGULATION)
+        #if defined(USE_THERMAL_REGULATION) || defined (USE_TEMP_CHECK)
         set_state(tempcheck_state, 0);
         #elif defined(USE_BEACON_MODE)
         set_state(beacon_state, 0);
