@@ -1,0 +1,253 @@
+<!-- Version 2.20 -->
+<!-- Generated 07/01/2022 GMT -->
+
+<!--
+ Copyright © 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ All rights reserved.
+ 
+ This software is developed by Microchip Technology Inc. and its subsidiaries ("Microchip").
+ 
+ Redistribution and use in source and binary forms, with or without modification, are
+ permitted provided that the following conditions are met:
+ 
+     1. Redistributions of source code must retain the above copyright notice, this list of
+        conditions and the following disclaimer.
+ 
+     2. Redistributions in binary form must reproduce the above copyright notice, this list
+        of conditions and the following disclaimer in the documentation and/or other
+        materials provided with the distribution. Publication is not required when
+        this file is used in an embedded application.
+ 
+     3. Microchip's name may not be used to endorse or promote products derived from this
+        software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Microchip MPLAB XC8 C Compiler: ATTINY13A Support Information</TITLE>
+</HEAD>
+<BODY>
+<h2>ATTINY13A Support Information</h2>
+<h3>XC8-CC #pragma config Usage</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;named value&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Select Clock Source : Int. RC Osc. 9.6 MHz; Start-up time: 14 CK + 64 ms<br/>// Divide clock by 8 internally : SET<br/>// Watch-dog Timer always on : CLEAR<br/>// Preserve EEPROM through the Chip Erase cycle : CLEAR<br/>// Serial program downloading (SPI) enabled : SET<br/>#pragma config SUT_CKSEL = SUT_CKSEL_INTRCOSC_9MHZ6_14CK_64MS, CKDIV8 = SET, WDTON = CLEAR, EESAVE = CLEAR, SPIEN = SET</code></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;literal constant&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Select Clock Source : Int. RC Osc. 9.6 MHz; Start-up time: 14 CK + 64 ms<br/>// Divide clock by 8 internally : SET<br/>// Watch-dog Timer always on : CLEAR<br/>// Preserve EEPROM through the Chip Erase cycle : CLEAR<br/>// Serial program downloading (SPI) enabled : SET<br/>#pragma config SUT_CKSEL = 0xA, CKDIV8 = 0x0, WDTON = 0x1, EESAVE = 0x1, SPIEN = 0x0</code></td>
+</tr>
+</tbody></table>
+<br/>
+<h3>Configuration Registers & Settings</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: LOW</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>SUT_CKSEL</tt></b></td>
+<td><b>Select Clock Source</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_EXTCLK_14CK_0MS</tt></td>
+<td>Ext. Clock; Start-up time: 14 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_EXTCLK_14CK_4MS</tt></td>
+<td>Ext. Clock; Start-up time: 14 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_EXTCLK_14CK_64MS</tt></td>
+<td>Ext. Clock; Start-up time: 14 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_4MHZ8_14CK_0MS</tt></td>
+<td>Int. RC Osc. 4.8 MHz; Start-up time: 14 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_4MHZ8_14CK_4MS</tt></td>
+<td>Int. RC Osc. 4.8 MHz; Start-up time: 14 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_4MHZ8_14CK_64MS</tt></td>
+<td>Int. RC Osc. 4.8 MHz; Start-up time: 14 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_9MHZ6_14CK_0MS</tt></td>
+<td>Int. RC Osc. 9.6 MHz; Start-up time: 14 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_9MHZ6_14CK_4MS</tt></td>
+<td>Int. RC Osc. 9.6 MHz; Start-up time: 14 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_9MHZ6_14CK_64MS</tt></td>
+<td>Int. RC Osc. 9.6 MHz; Start-up time: 14 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_128KHZ_14CK_0MS</tt></td>
+<td>Int. RC Osc. 128 kHz; Start-up time: 14 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_128KHZ_14CK_4MS</tt></td>
+<td>Int. RC Osc. 128 kHz; Start-up time: 14 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_CKSEL_INTRCOSC_128KHZ_14CK_64MS</tt></td>
+<td>Int. RC Osc. 128 kHz; Start-up time: 14 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CKDIV8</tt></b></td>
+<td><b>Divide clock by 8 internally</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>WDTON</tt></b></td>
+<td><b>Watch-dog Timer always on</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>EESAVE</tt></b></td>
+<td><b>Preserve EEPROM through the Chip Erase cycle</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>SPIEN</tt></b></td>
+<td><b>Serial program downloading (SPI) enabled</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: HIGH</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>RSTDISBL</tt></b></td>
+<td><b>Reset Disabled (Enable PB5 as i/o pin)</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>BODLEVEL</tt></b></td>
+<td><b>Enable BOD and select level</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>BODLEVEL_4V3</tt></td>
+<td>Brown-out detection at VCC=4.3 V</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>BODLEVEL_2V7</tt></td>
+<td>Brown-out detection at VCC=2.7 V</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>BODLEVEL_1V8</tt></td>
+<td>Brown-out detection at VCC=1.8 V</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>BODLEVEL_DISABLED</tt></td>
+<td>Brown-out detection disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>DWEN</tt></b></td>
+<td><b>Debug Wire enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>SELFPRGEN</tt></b></td>
+<td><b>Self Programming enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: LOCKBIT</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>LB</tt></b></td>
+<td><b>Memory Lock</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LB_PROG_VER_DISABLED</tt></td>
+<td>Further programming and verification disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LB_PROG_DISABLED</tt></td>
+<td>Further programming disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LB_NO_LOCK</tt></td>
+<td>No memory lock features enabled</td>
+</tr>
+</tbody></table>
+<br/>
+</BODY>
+</HTML>

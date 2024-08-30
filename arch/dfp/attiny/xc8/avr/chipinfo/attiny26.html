@@ -1,0 +1,421 @@
+<!-- Version 2.20 -->
+<!-- Generated 07/01/2022 GMT -->
+
+<!--
+ Copyright © 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ All rights reserved.
+ 
+ This software is developed by Microchip Technology Inc. and its subsidiaries ("Microchip").
+ 
+ Redistribution and use in source and binary forms, with or without modification, are
+ permitted provided that the following conditions are met:
+ 
+     1. Redistributions of source code must retain the above copyright notice, this list of
+        conditions and the following disclaimer.
+ 
+     2. Redistributions in binary form must reproduce the above copyright notice, this list
+        of conditions and the following disclaimer in the documentation and/or other
+        materials provided with the distribution. Publication is not required when
+        this file is used in an embedded application.
+ 
+     3. Microchip's name may not be used to endorse or promote products derived from this
+        software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Microchip MPLAB XC8 C Compiler: ATTINY26 Support Information</TITLE>
+</HEAD>
+<BODY>
+<h2>ATTINY26 Support Information</h2>
+<h3>XC8-CC #pragma config Usage</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;named value&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Select Clock Source : Int. RC Osc. 1 MHz; Start-up time: 6 CK + 64 ms<br/>// CKOPT fuse (operation dependent of CKSEL fuses) : CLEAR<br/>#pragma config PLLCK_SUT_CKSEL = PLLCK_SUT_CKSEL_INTRCOSC_1MHZ_6CK_64MS, CKOPT = CLEAR</code></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;literal constant&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Select Clock Source : Int. RC Osc. 1 MHz; Start-up time: 6 CK + 64 ms<br/>// CKOPT fuse (operation dependent of CKSEL fuses) : CLEAR<br/>#pragma config PLLCK_SUT_CKSEL = 0xA1, CKOPT = 0x1</code></td>
+</tr>
+</tbody></table>
+<br/>
+<h3>Configuration Registers & Settings</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: LOW</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>PLLCK_SUT_CKSEL</tt></b></td>
+<td><b>Select Clock Source</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_PLLCLK_1KCK_0MS</tt></td>
+<td>PLL Clock; Start-up time: 1K CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_PLLCLK_1KCK_4MS</tt></td>
+<td>PLL Clock; Start-up time: 1K CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_PLLCLK_1KCK_64MS</tt></td>
+<td>PLL Clock; Start-up time: 1K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_PLLCLK_16KCK_64MS</tt></td>
+<td>PLL Clock; Start-up time: 16K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTCLK_6CK_0MS</tt></td>
+<td>Ext. Clock; Start-up time: 6 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTCLK_6CK_4MS</tt></td>
+<td>Ext. Clock; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTCLK_6CK_64MS</tt></td>
+<td>Ext. Clock; Start-up time: 6 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_1MHZ_6CK_0MS</tt></td>
+<td>Int. RC Osc. 1 MHz; Start-up time: 6 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_1MHZ_6CK_4MS</tt></td>
+<td>Int. RC Osc. 1 MHz; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_1MHZ_6CK_64MS</tt></td>
+<td>Int. RC Osc. 1 MHz; Start-up time: 6 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_2MHZ_6CK_0MS</tt></td>
+<td>Int. RC Osc. 2 MHz; Start-up time: 6 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_2MHZ_6CK_4MS</tt></td>
+<td>Int. RC Osc. 2 MHz; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_2MHZ_6CK_64MS</tt></td>
+<td>Int. RC Osc. 2 MHz; Start-up time: 6 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_4MHZ_6CK_0MS</tt></td>
+<td>Int. RC Osc. 4 MHz; Start-up time: 6 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_4MHZ_6CK_4MS</tt></td>
+<td>Int. RC Osc. 4 MHz; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_4MHZ_6CK_64MS</tt></td>
+<td>Int. RC Osc. 4 MHz; Start-up time: 6 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_8MHZ_6CK_0MS</tt></td>
+<td>Int. RC Osc. 8 MHz; Start-up time: 6 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_8MHZ_6CK_4MS</tt></td>
+<td>Int. RC Osc. 8 MHz; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_INTRCOSC_8MHZ_6CK_64MS</tt></td>
+<td>Int. RC Osc. 8 MHz; Start-up time: 6 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_XX_0MHZ9_18CK_0MS</tt></td>
+<td>Ext. RC Osc.         -  0.9 MHz; Start-up time: 18 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_XX_0MHZ9_18CK_4MS</tt></td>
+<td>Ext. RC Osc.         -  0.9 MHz; Start-up time: 18 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_XX_0MHZ9_18CK_64MS</tt></td>
+<td>Ext. RC Osc.         -  0.9 MHz; Start-up time: 18 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_XX_0MHZ9_6CK_4MS</tt></td>
+<td>Ext. RC Osc.         -  0.9 MHz; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_0MHZ9_3MHZ_18CK_0MS</tt></td>
+<td>Ext. RC Osc. 0.9 MHz -  3.0 MHz; Start-up time: 18 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_0MHZ9_3MHZ_18CK_4MS</tt></td>
+<td>Ext. RC Osc. 0.9 MHz -  3.0 MHz; Start-up time: 18 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_0MHZ9_3MHZ_18CK_64MS</tt></td>
+<td>Ext. RC Osc. 0.9 MHz -  3.0 MHz; Start-up time: 18 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_0MHZ9_3MHZ_6CK_4MS</tt></td>
+<td>Ext. RC Osc. 0.9 MHz -  3.0 MHz; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_3MHZ_8MHZ_18CK_0MS</tt></td>
+<td>Ext. RC Osc. 3.0 MHz -  8.0 MHz; Start-up time: 18 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_3MHZ_8MHZ_18CK_4MS</tt></td>
+<td>Ext. RC Osc. 3.0 MHz -  8.0 MHz; Start-up time: 18 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_3MHZ_8MHZ_18CK_64MS</tt></td>
+<td>Ext. RC Osc. 3.0 MHz -  8.0 MHz; Start-up time: 18 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_3MHZ_8MHZ_6CK_4MS</tt></td>
+<td>Ext. RC Osc. 3.0 MHz -  8.0 MHz; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_8MHZ_12MHZ_18CK_0MS</tt></td>
+<td>Ext. RC Osc. 8.0 MHz - 12.0 MHz; Start-up time: 18 CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_8MHZ_12MHZ_18CK_4MS</tt></td>
+<td>Ext. RC Osc. 8.0 MHz - 12.0 MHz; Start-up time: 18 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_8MHZ_12MHZ_18CK_64MS</tt></td>
+<td>Ext. RC Osc. 8.0 MHz - 12.0 MHz; Start-up time: 18 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTRCOSC_8MHZ_12MHZ_6CK_4MS</tt></td>
+<td>Ext. RC Osc. 8.0 MHz - 12.0 MHz; Start-up time: 6 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTAL_1KCK_4MS</tt></td>
+<td>Ext. Low-Freq. Crystal; Start-up time: 1K CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTAL_1KCK_64MS</tt></td>
+<td>Ext. Low-Freq. Crystal; Start-up time: 1K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTAL_32KCK_64MS</tt></td>
+<td>Ext. Low-Freq. Crystal; Start-up time: 32K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTALRES_258CK_4MS</tt></td>
+<td>Ext. Crystal/Resonator Low Freq.; Start-up time: 258 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTALRES_258CK_64MS</tt></td>
+<td>Ext. Crystal/Resonator Low Freq.; Start-up time: 258 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTALRES_1KCK_0MS</tt></td>
+<td>Ext. Crystal/Resonator Low Freq.; Start-up time: 1K CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTALRES_1KCK_4MS</tt></td>
+<td>Ext. Crystal/Resonator Low Freq.; Start-up time: 1K CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTALRES_1KCK_64MS</tt></td>
+<td>Ext. Crystal/Resonator Low Freq.; Start-up time: 1K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTALRES_16KCK_0MS</tt></td>
+<td>Ext. Crystal/Resonator Low Freq.; Start-up time: 16K CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTALRES_16KCK_4MS</tt></td>
+<td>Ext. Crystal/Resonator Low Freq.; Start-up time: 16K CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTLOFXTALRES_16KCK_64MS</tt></td>
+<td>Ext. Crystal/Resonator Low Freq.; Start-up time: 16K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTMEDFXTALRES_258CK_4MS</tt></td>
+<td>Ext. Crystal/Resonator Medium Freq.; Start-up time: 258 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTMEDFXTALRES_258CK_64MS</tt></td>
+<td>Ext. Crystal/Resonator Medium Freq.; Start-up time: 258 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTMEDFXTALRES_1KCK_0MS</tt></td>
+<td>Ext. Crystal/Resonator Medium Freq.; Start-up time: 1K CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTMEDFXTALRES_1KCK_4MS</tt></td>
+<td>Ext. Crystal/Resonator Medium Freq.; Start-up time: 1K CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTMEDFXTALRES_1KCK_64MS</tt></td>
+<td>Ext. Crystal/Resonator Medium Freq.; Start-up time: 1K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTMEDFXTALRES_16KCK_0MS</tt></td>
+<td>Ext. Crystal/Resonator Medium Freq.; Start-up time: 16K CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTMEDFXTALRES_16KCK_4MS</tt></td>
+<td>Ext. Crystal/Resonator Medium Freq.; Start-up time: 16K CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTMEDFXTALRES_16KCK_64MS</tt></td>
+<td>Ext. Crystal/Resonator Medium Freq.; Start-up time: 16K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTHIFXTALRES_258CK_4MS</tt></td>
+<td>Ext. Crystal/Resonator High Freq.; Start-up time: 258 CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTHIFXTALRES_258CK_64MS</tt></td>
+<td>Ext. Crystal/Resonator High Freq.; Start-up time: 258 CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTHIFXTALRES_1KCK_0MS</tt></td>
+<td>Ext. Crystal/Resonator High Freq.; Start-up time: 1K CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTHIFXTALRES_1KCK_4MS</tt></td>
+<td>Ext. Crystal/Resonator High Freq.; Start-up time: 1K CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTHIFXTALRES_1KCK_64MS</tt></td>
+<td>Ext. Crystal/Resonator High Freq.; Start-up time: 1K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTHIFXTALRES_16KCK_0MS</tt></td>
+<td>Ext. Crystal/Resonator High Freq.; Start-up time: 16K CK + 0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTHIFXTALRES_16KCK_4MS</tt></td>
+<td>Ext. Crystal/Resonator High Freq.; Start-up time: 16K CK + 4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PLLCK_SUT_CKSEL_EXTHIFXTALRES_16KCK_64MS</tt></td>
+<td>Ext. Crystal/Resonator High Freq.; Start-up time: 16K CK + 64 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CKOPT</tt></b></td>
+<td><b>CKOPT fuse (operation dependent of CKSEL fuses)</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: HIGH</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>BODEN</tt></b></td>
+<td><b>Brown-out detection enabled</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>BODLEVEL</tt></b></td>
+<td><b>Brownout detector trigger level</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>BODLEVEL_4V0</tt></td>
+<td>Brown-out detection at VCC=4.0 V</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>BODLEVEL_2V7</tt></td>
+<td>Brown-out detection at VCC=2.7 V</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>EESAVE</tt></b></td>
+<td><b>Preserve EEPROM through the Chip Erase cycle</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>SPIEN</tt></b></td>
+<td><b>Serial program downloading (SPI) enabled</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>RSTDISBL</tt></b></td>
+<td><b>Reset Disabled (Enable PB7 as i/o pin)</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: LOCKBIT</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>LB</tt></b></td>
+<td><b>Memory Lock</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LB_PROG_VER_DISABLED</tt></td>
+<td>Further programming and verification disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LB_PROG_DISABLED</tt></td>
+<td>Further programming disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LB_NO_LOCK</tt></td>
+<td>No memory lock features enabled</td>
+</tr>
+</tbody></table>
+<br/>
+</BODY>
+</HTML>

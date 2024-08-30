@@ -1,0 +1,2354 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="AVR128DA28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR128DA28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr128da28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr128da28/device-specs/specs-avr128da28"/>
+        <meta key="mmcu-option" value="avr128da28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr128da28/avrxmega4/libavr128da28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr128da28/avrxmega4/crtavr128da28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr128da28"/>
+        <meta key="mmcu-option" value="avr128da28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/libavr128da28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/crtavr128da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128da28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128da28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr128da28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr128da28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr128da28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR128DA28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR128DA32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR128DA32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr128da32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr128da32/device-specs/specs-avr128da32"/>
+        <meta key="mmcu-option" value="avr128da32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr128da32/avrxmega4/libavr128da32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr128da32/avrxmega4/crtavr128da32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr128da32"/>
+        <meta key="mmcu-option" value="avr128da32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/libavr128da32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/crtavr128da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128da32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128da32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr128da32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr128da32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr128da32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR128DA32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR128DA48">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR128DA48.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr128da48.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr128da48/device-specs/specs-avr128da48"/>
+        <meta key="mmcu-option" value="avr128da48"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr128da48/avrxmega4/libavr128da48.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr128da48/avrxmega4/crtavr128da48.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr128da48"/>
+        <meta key="mmcu-option" value="avr128da48"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/libavr128da48.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/crtavr128da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128da48.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128da48.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr128da48.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr128da48.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr128da48.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR128DA48def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR128DA64">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR128DA64.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr128da64.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr128da64/device-specs/specs-avr128da64"/>
+        <meta key="mmcu-option" value="avr128da64"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr128da64/avrxmega4/libavr128da64.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr128da64/avrxmega4/crtavr128da64.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr128da64"/>
+        <meta key="mmcu-option" value="avr128da64"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/libavr128da64.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/crtavr128da64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128da64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128da64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128da64.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128da64.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr128da64.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr128da64.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr128da64.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR128DA64def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR128DB28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR128DB28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr128db28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr128db28/device-specs/specs-avr128db28"/>
+        <meta key="mmcu-option" value="avr128db28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr128db28/avrxmega4/libavr128db28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr128db28/avrxmega4/crtavr128db28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr128db28"/>
+        <meta key="mmcu-option" value="avr128db28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/libavr128db28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/crtavr128db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128db28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/mapped/libavr128db28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr128db28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr128db28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr128db28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR128DB28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR128DB32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR128DB32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr128db32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr128db32/device-specs/specs-avr128db32"/>
+        <meta key="mmcu-option" value="avr128db32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr128db32/avrxmega4/libavr128db32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr128db32/avrxmega4/crtavr128db32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr128db32"/>
+        <meta key="mmcu-option" value="avr128db32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/libavr128db32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/crtavr128db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/mapped/crtavr128db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128db32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/mapped/libavr128db32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr128db32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr128db32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr128db32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR128DB32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR128DB48">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR128DB48.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr128db48.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr128db48/device-specs/specs-avr128db48"/>
+        <meta key="mmcu-option" value="avr128db48"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr128db48/avrxmega4/libavr128db48.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr128db48/avrxmega4/crtavr128db48.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr128db48"/>
+        <meta key="mmcu-option" value="avr128db48"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/libavr128db48.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/crtavr128db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128db48.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/mapped/libavr128db48.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr128db48.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr128db48.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr128db48.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR128DB48def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR128DB64">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR128DB64.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr128db64.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr128db64/device-specs/specs-avr128db64"/>
+        <meta key="mmcu-option" value="avr128db64"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr128db64/avrxmega4/libavr128db64.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr128db64/avrxmega4/crtavr128db64.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr128db64"/>
+        <meta key="mmcu-option" value="avr128db64"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/libavr128db64.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/crtavr128db64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/crtavr128db64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/libavr128db64.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega4/memx-const/mapped/libavr128db64.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr128db64.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr128db64.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr128db64.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR128DB64def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR16DD14">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR16DD14.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr16dd14.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr16dd14/device-specs/specs-avr16dd14"/>
+        <meta key="mmcu-option" value="avr16dd14"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr16dd14/avrxmega3/libavr16dd14.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr16dd14/avrxmega3/crtavr16dd14.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr16dd14"/>
+        <meta key="mmcu-option" value="avr16dd14"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd14.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd14.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd14.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr16dd14.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr16dd14.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr16dd14.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR16DD14def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR16DD20">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR16DD20.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr16dd20.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr16dd20/device-specs/specs-avr16dd20"/>
+        <meta key="mmcu-option" value="avr16dd20"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr16dd20/avrxmega3/libavr16dd20.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr16dd20/avrxmega3/crtavr16dd20.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr16dd20"/>
+        <meta key="mmcu-option" value="avr16dd20"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd20.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd20.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd20.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr16dd20.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr16dd20.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr16dd20.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR16DD20def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR16DD28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR16DD28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr16dd28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr16dd28/device-specs/specs-avr16dd28"/>
+        <meta key="mmcu-option" value="avr16dd28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr16dd28/avrxmega3/libavr16dd28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr16dd28/avrxmega3/crtavr16dd28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr16dd28"/>
+        <meta key="mmcu-option" value="avr16dd28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr16dd28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr16dd28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr16dd28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR16DD28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR16DD32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR16DD32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr16dd32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr16dd32/device-specs/specs-avr16dd32"/>
+        <meta key="mmcu-option" value="avr16dd32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr16dd32/avrxmega3/libavr16dd32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr16dd32/avrxmega3/crtavr16dd32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr16dd32"/>
+        <meta key="mmcu-option" value="avr16dd32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr16dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr16dd32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr16dd32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr16dd32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr16dd32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR16DD32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DA28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DA28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32da28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32da28/device-specs/specs-avr32da28"/>
+        <meta key="mmcu-option" value="avr32da28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32da28/avrxmega3/libavr32da28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32da28/avrxmega3/crtavr32da28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32da28"/>
+        <meta key="mmcu-option" value="avr32da28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32da28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32da28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32da28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DA28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DA32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DA32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32da32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32da32/device-specs/specs-avr32da32"/>
+        <meta key="mmcu-option" value="avr32da32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32da32/avrxmega3/libavr32da32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32da32/avrxmega3/crtavr32da32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32da32"/>
+        <meta key="mmcu-option" value="avr32da32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32da32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32da32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32da32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DA32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DA48">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DA48.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32da48.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32da48/device-specs/specs-avr32da48"/>
+        <meta key="mmcu-option" value="avr32da48"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32da48/avrxmega3/libavr32da48.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32da48/avrxmega3/crtavr32da48.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32da48"/>
+        <meta key="mmcu-option" value="avr32da48"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da48.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da48.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32da48.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32da48.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32da48.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32da48.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DA48def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DB28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DB28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32db28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32db28/device-specs/specs-avr32db28"/>
+        <meta key="mmcu-option" value="avr32db28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32db28/avrxmega3/libavr32db28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32db28/avrxmega3/crtavr32db28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32db28"/>
+        <meta key="mmcu-option" value="avr32db28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32db28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32db28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32db28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DB28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DB32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DB32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32db32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32db32/device-specs/specs-avr32db32"/>
+        <meta key="mmcu-option" value="avr32db32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32db32/avrxmega3/libavr32db32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32db32/avrxmega3/crtavr32db32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32db32"/>
+        <meta key="mmcu-option" value="avr32db32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32db32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32db32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32db32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DB32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DB48">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DB48.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32db48.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32db48/device-specs/specs-avr32db48"/>
+        <meta key="mmcu-option" value="avr32db48"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32db48/avrxmega3/libavr32db48.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32db48/avrxmega3/crtavr32db48.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32db48"/>
+        <meta key="mmcu-option" value="avr32db48"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db48.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db48.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32db48.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32db48.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32db48.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32db48.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DB48def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DD14">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DD14.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32dd14.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32dd14/device-specs/specs-avr32dd14"/>
+        <meta key="mmcu-option" value="avr32dd14"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32dd14/avrxmega3/libavr32dd14.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32dd14/avrxmega3/crtavr32dd14.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32dd14"/>
+        <meta key="mmcu-option" value="avr32dd14"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd14.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd14.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd14.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32dd14.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32dd14.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32dd14.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DD14def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DD20">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DD20.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32dd20.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32dd20/device-specs/specs-avr32dd20"/>
+        <meta key="mmcu-option" value="avr32dd20"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32dd20/avrxmega3/libavr32dd20.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32dd20/avrxmega3/crtavr32dd20.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32dd20"/>
+        <meta key="mmcu-option" value="avr32dd20"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd20.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd20.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd20.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32dd20.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32dd20.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32dd20.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DD20def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DD28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DD28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32dd28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32dd28/device-specs/specs-avr32dd28"/>
+        <meta key="mmcu-option" value="avr32dd28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32dd28/avrxmega3/libavr32dd28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32dd28/avrxmega3/crtavr32dd28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32dd28"/>
+        <meta key="mmcu-option" value="avr32dd28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32dd28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32dd28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32dd28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DD28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR32DD32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR32DD32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr32dd32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr32dd32/device-specs/specs-avr32dd32"/>
+        <meta key="mmcu-option" value="avr32dd32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr32dd32/avrxmega3/libavr32dd32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr32dd32/avrxmega3/crtavr32dd32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr32dd32"/>
+        <meta key="mmcu-option" value="avr32dd32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/crtavr32dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega3/libavr32dd32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr32dd32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr32dd32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr32dd32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR32DD32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DA28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DA28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64da28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64da28/device-specs/specs-avr64da28"/>
+        <meta key="mmcu-option" value="avr64da28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64da28/avrxmega2/libavr64da28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64da28/avrxmega2/crtavr64da28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64da28"/>
+        <meta key="mmcu-option" value="avr64da28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64da28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64da28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64da28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64da28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64da28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64da28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64da28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DA28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DA32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DA32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64da32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64da32/device-specs/specs-avr64da32"/>
+        <meta key="mmcu-option" value="avr64da32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64da32/avrxmega2/libavr64da32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64da32/avrxmega2/crtavr64da32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64da32"/>
+        <meta key="mmcu-option" value="avr64da32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64da32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64da32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64da32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64da32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64da32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64da32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64da32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DA32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DA48">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DA48.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64da48.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64da48/device-specs/specs-avr64da48"/>
+        <meta key="mmcu-option" value="avr64da48"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64da48/avrxmega2/libavr64da48.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64da48/avrxmega2/crtavr64da48.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64da48"/>
+        <meta key="mmcu-option" value="avr64da48"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64da48.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64da48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64da48.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64da48.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64da48.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64da48.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64da48.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DA48def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DA64">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DA64.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64da64.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64da64/device-specs/specs-avr64da64"/>
+        <meta key="mmcu-option" value="avr64da64"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64da64/avrxmega2/libavr64da64.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64da64/avrxmega2/crtavr64da64.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64da64"/>
+        <meta key="mmcu-option" value="avr64da64"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64da64.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64da64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64da64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64da64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64da64.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64da64.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64da64.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64da64.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64da64.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DA64def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DB28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DB28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64db28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64db28/device-specs/specs-avr64db28"/>
+        <meta key="mmcu-option" value="avr64db28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64db28/avrxmega2/libavr64db28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64db28/avrxmega2/crtavr64db28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64db28"/>
+        <meta key="mmcu-option" value="avr64db28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64db28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64db28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64db28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64db28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64db28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64db28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64db28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DB28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DB32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DB32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64db32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64db32/device-specs/specs-avr64db32"/>
+        <meta key="mmcu-option" value="avr64db32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64db32/avrxmega2/libavr64db32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64db32/avrxmega2/crtavr64db32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64db32"/>
+        <meta key="mmcu-option" value="avr64db32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64db32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64db32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64db32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64db32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64db32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64db32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64db32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DB32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DB48">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DB48.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64db48.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64db48/device-specs/specs-avr64db48"/>
+        <meta key="mmcu-option" value="avr64db48"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64db48/avrxmega2/libavr64db48.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64db48/avrxmega2/crtavr64db48.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64db48"/>
+        <meta key="mmcu-option" value="avr64db48"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64db48.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64db48.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64db48.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64db48.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64db48.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64db48.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64db48.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DB48def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DB64">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DB64.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64db64.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64db64/device-specs/specs-avr64db64"/>
+        <meta key="mmcu-option" value="avr64db64"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64db64/avrxmega2/libavr64db64.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64db64/avrxmega2/crtavr64db64.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64db64"/>
+        <meta key="mmcu-option" value="avr64db64"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64db64.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64db64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64db64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64db64.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64db64.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64db64.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64db64.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64db64.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64db64.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DB64def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DD14">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DD14.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64dd14.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64dd14/device-specs/specs-avr64dd14"/>
+        <meta key="mmcu-option" value="avr64dd14"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64dd14/avrxmega2/libavr64dd14.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64dd14/avrxmega2/crtavr64dd14.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64dd14"/>
+        <meta key="mmcu-option" value="avr64dd14"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64dd14.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64dd14.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64dd14.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64dd14.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64dd14.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64dd14.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64dd14.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DD14def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DD20">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DD20.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64dd20.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64dd20/device-specs/specs-avr64dd20"/>
+        <meta key="mmcu-option" value="avr64dd20"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64dd20/avrxmega2/libavr64dd20.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64dd20/avrxmega2/crtavr64dd20.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64dd20"/>
+        <meta key="mmcu-option" value="avr64dd20"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64dd20.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64dd20.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64dd20.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64dd20.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64dd20.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64dd20.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64dd20.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DD20def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DD28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DD28.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64dd28.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64dd28/device-specs/specs-avr64dd28"/>
+        <meta key="mmcu-option" value="avr64dd28"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64dd28/avrxmega2/libavr64dd28.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64dd28/avrxmega2/crtavr64dd28.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64dd28"/>
+        <meta key="mmcu-option" value="avr64dd28"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64dd28.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64dd28.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64dd28.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64dd28.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64dd28.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64dd28.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64dd28.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DD28def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+    <resources target="AVR64DD32">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="AVR64DD32.atdf"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="avr/ioavr64dd32.h"/>
+        <includes pattern="component-version.h"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.spec" subdir="gcc">
+        <includes pattern="dev/avr64dd32/device-specs/specs-avr64dd32"/>
+        <meta key="mmcu-option" value="avr64dd32"/>
+      </resource>
+      <resource type="gcc.lib" subdir="gcc">
+        <includes pattern="dev/avr64dd32/avrxmega2/libavr64dd32.a"/>
+      </resource>
+      <resource type="gcc.startup.obj" subdir="gcc">
+        <includes pattern="dev/avr64dd32/avrxmega2/crtavr64dd32.o"/>
+      </resource>
+      <resource type="xc8.spec" subdir="xc8">
+        <includes pattern="avr/device-specs/specs-avr64dd32"/>
+        <meta key="mmcu-option" value="avr64dd32"/>
+      </resource>
+      <resource type="xc8.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/libavr64dd32.a"/>
+      </resource>
+      <resource type="xc8.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/crtavr64dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/crtavr64dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.startup.obj" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/crtavr64dd32.o"/>
+      </resource>
+      <resource type="xc8.memxconst.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/libavr64dd32.a"/>
+      </resource>
+      <resource type="xc8.memxconst.mapped.lib" subdir="xc8">
+        <includes pattern="avr/lib/avrxmega2/memx-const/mapped/libavr64dd32.a"/>
+      </resource>
+      <resource type="xc8.c.header" subdir="xc8">
+        <includes pattern="avr/include/avr/ioavr64dd32.h"/>
+      </resource>
+      <resource type="xc8.cfgdata" subdir="xc8">
+        <includes pattern="avr/cfgdata/avr64dd32.cfgdata"/>
+      </resource>
+      <resource type="xc8.chipinfo" subdir="xc8">
+        <includes pattern="avr/chipinfo/avr64dd32.html"/>
+      </resource>
+      <resource type="avrasm.header" subdir="avrasm/inc">
+        <includes pattern="AVR64DD32def.inc"/>
+      </resource>
+      <resource type="avrasm.source.template" subdir="avrasm/templates">
+        <includes pattern="main.asm"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Atmel" compliant="false">
+    <releases>
+      <release version="2.2.BUILDNUMBER">
+        - DEVXML-4651 Corrected EVSYS CHANNEL9 PIT output names.
+        - DEVXML-4639 Updated SPI prescaler and TCA clock select bit-value descriptions.
+        - DEVXML-4582 Corrected bit values for EVSYS.SWEVENTB.
+      </release>
+      <release version="2.1.146" date="2022-04-20">Added prerequisite to Microchip Studio 7.0.2564 or newer for AVR DD devices. In XC8, disabled mapped-progmem feature for AVR128DA devices.</release>
+      <release version="2.0.141" date="2022-02-01">
+        - Multiple updates to ATDFs, including new mode description and updated ATDF schema to version 4.5.
+        - Added HV_IMPLEMENTATION property to indicate available UPDI HV option.
+        - Add an underscore between bitfield name and bitfield bit-number for bitfield defines on bitfields with more than one bit for both C-header and assembler .inc files.
+        - In assembler include files removed mode name from USART CMODE group configuration defines.
+        - Added value-group for ADC CONVMODE.
+        - Corrected SYSCFG0 default value on AVR DD devices.
+        - Corrected AC and ADC channel select values for AVR DD devices.
+        - Corrected value names for bitfield SELHF in CLKCTRL.XOSCHFCTRLA for AVR DD devices.
+        - Added support for AVR16/32DD devices.
+      </release>
+      <release version="1.10.114" date="2021-10-25">Fixed AVR-LibC EEPROM read/write routines for avr-gcc. Corrected alternative USART1 pins on AVR DD devices. Added byte address defines for registers larger than 8 bits in assembler include files.</release>
+      <release version="1.9.103" date="2021-07-20">Renamed bitfield in CLKCTRL.OSCHFCTRLA from FREQSEL to FRQSEL. Fixed AVR-LibC EEPROM read/write routines for XC8. Changes to exploit config mapped flash on supported compilers.</release>
+      <release version="1.8.95" date="2021-04-29">Added bitmask values for PORT.INTFLAGS and VPORT.INTFLAGS for AVR DA devices.</release>
+      <release version="1.7.85" date="2021-03-05">Added support for AVR64DD. Added TRUTH bitfields to CCL.TRUTHn registers. Changed nomenclature for serial communication. Renamed external clock source selection in AVR DB from CRYSTAL to XTAL. Added value NONE (0x00) to TCA0.SINGLE.EVCTRL EVACTB. Renamed CLKCTRL.XOSCHFCTRLA.SELHF value CRYSTAL to XTAL for AVR DB devices.</release>
+      <release version="1.6.76" date="2020-10-30">Removed numbering on SEQSEL bitfield name in CCL.SEQCTRLn registers, which results in shared bitfield description for SEQSEL bitfields. Updated various CCL captions. Corrected AC_POWER caption. Updated conditions in .pdsc for XC8 compiler.</release>
+      <release version="1.5.74" date="2020-09-18">Added PAGE_SIZE for memories in assembler include files. Added support for AVR32DB and AVR64DB.</release>
+      <release version="1.4.73" date="2020-09-11">Corrected RAMPZ mask. Corrected typo in TCB CLKSEL value. Removed unavailable options in PORTMUX for device variants in smaller packages.</release>
+      <release version="1.3.67" date="2020-08-14">Added XC8 support files. Add HTLLEN bit to VREGCTRL. Added bitfields for CCL INTFLAGS. Corrected RS485 mode bitfield values for USART. Updated copyright notice in c-header files.</release>
+      <release version="1.2.56" date="2020-06-30">Corrected TWI signals and added missing ADC inputs for AVR DA. Updated AC INTMODE values and CLKCTRL SOURCE bit. Updated OPAMP MUXPOS values for AVR DB.</release>
+      <release version="1.1.45" date="2020-06-04">Added support for AVR32DA, AVR64DA and AVR128DB devices. Corrected PORTMUX TWI signals. Removed peripheral instances not present in device.</release>
+      <release version="1.0.27" date="2020-03-16">Corrected CRC selection. Added PTC interrupt vector and renamed NMI vector. Added LOCKBITS_DEFAULT.</release>
+      <release version="1.0.21" date="2020-01-31">Added PTC information. Corrected SPI1 alternative pins for AVR128DA48 and AVR128DA64. Updated external clock and clock output signals. Corrected CORE_VERSION.</release>
+      <release version="1.0.16" date="2019-11-07">Initial release.</release>
+    </releases>
+    <prerequisites>
+      <prerequisite context="studio" component="Atmel Studio" version="7.0.2564" target="AVR\d+DD\d+"/>
+    </prerequisites>
+  </pdsc>
+</package>

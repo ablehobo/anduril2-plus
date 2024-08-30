@@ -1,0 +1,509 @@
+<!-- Version 2.20 -->
+<!-- Generated 07/01/2022 GMT -->
+
+<!--
+ Copyright © 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ All rights reserved.
+ 
+ This software is developed by Microchip Technology Inc. and its subsidiaries ("Microchip").
+ 
+ Redistribution and use in source and binary forms, with or without modification, are
+ permitted provided that the following conditions are met:
+ 
+     1. Redistributions of source code must retain the above copyright notice, this list of
+        conditions and the following disclaimer.
+ 
+     2. Redistributions in binary form must reproduce the above copyright notice, this list
+        of conditions and the following disclaimer in the documentation and/or other
+        materials provided with the distribution. Publication is not required when
+        this file is used in an embedded application.
+ 
+     3. Microchip's name may not be used to endorse or promote products derived from this
+        software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Microchip MPLAB XC8 C Compiler: ATTINY402 Support Information</TITLE>
+</HEAD>
+<BODY>
+<h2>ATTINY402 Support Information</h2>
+<h3>XC8-CC #pragma config Usage</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;named value&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Watchdog Timeout Period : Watch-Dog timer Off<br/>// Watchdog Window Timeout Period : Window mode off<br/>#pragma config PERIOD = PERIOD_OFF, WINDOW = WINDOW_OFF</code></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;literal constant&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Watchdog Timeout Period : Watch-Dog timer Off<br/>// Watchdog Window Timeout Period : Window mode off<br/>#pragma config PERIOD = 0x0, WINDOW = 0x0</code></td>
+</tr>
+</tbody></table>
+<br/>
+<h3>Configuration Registers & Settings</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: WDTCFG</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>PERIOD</tt></b></td>
+<td><b>Watchdog Timeout Period</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_OFF</tt></td>
+<td>Watch-Dog timer Off</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_8CLK</tt></td>
+<td>8 cycles (8ms)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_16CLK</tt></td>
+<td>16 cycles (16ms)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_32CLK</tt></td>
+<td>32 cycles (32ms)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_64CLK</tt></td>
+<td>64 cycles (64ms)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_128CLK</tt></td>
+<td>128 cycles (0.128s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_256CLK</tt></td>
+<td>256 cycles (0.256s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_512CLK</tt></td>
+<td>512 cycles (0.512s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_1KCLK</tt></td>
+<td>1K cycles (1.0s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_2KCLK</tt></td>
+<td>2K cycles (2.0s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_4KCLK</tt></td>
+<td>4K cycles (4.1s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>PERIOD_8KCLK</tt></td>
+<td>8K cycles (8.2s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>WINDOW</tt></b></td>
+<td><b>Watchdog Window Timeout Period</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_OFF</tt></td>
+<td>Window mode off</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_8CLK</tt></td>
+<td>8 cycles (8ms)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_16CLK</tt></td>
+<td>16 cycles (16ms)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_32CLK</tt></td>
+<td>32 cycles (32ms)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_64CLK</tt></td>
+<td>64 cycles (64ms)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_128CLK</tt></td>
+<td>128 cycles (0.128s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_256CLK</tt></td>
+<td>256 cycles (0.256s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_512CLK</tt></td>
+<td>512 cycles (0.512s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_1KCLK</tt></td>
+<td>1K cycles (1.0s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_2KCLK</tt></td>
+<td>2K cycles (2.0s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_4KCLK</tt></td>
+<td>4K cycles (4.1s)</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>WINDOW_8KCLK</tt></td>
+<td>8K cycles (8.2s)</td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: BODCFG</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>SLEEP</tt></b></td>
+<td><b>BOD Operation in Sleep Mode</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SLEEP_DIS</tt></td>
+<td>Disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SLEEP_ENABLED</tt></td>
+<td>Enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SLEEP_SAMPLED</tt></td>
+<td>Sampled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>ACTIVE</tt></b></td>
+<td><b>BOD Operation in Active Mode</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ACTIVE_DIS</tt></td>
+<td>Disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ACTIVE_ENABLED</tt></td>
+<td>Enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ACTIVE_SAMPLED</tt></td>
+<td>Sampled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ACTIVE_ENWAKE</tt></td>
+<td>Enabled with wake-up halted until BOD is ready</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>SAMPFREQ</tt></b></td>
+<td><b>BOD Sample Frequency</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SAMPFREQ_1KHz</tt></td>
+<td>1kHz sampling frequency</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SAMPFREQ_125Hz</tt></td>
+<td>125Hz sampling frequency</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>LVL</tt></b></td>
+<td><b>BOD Level</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LVL_BODLEVEL0</tt></td>
+<td>1.8 V</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LVL_BODLEVEL2</tt></td>
+<td>2.6 V</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LVL_BODLEVEL7</tt></td>
+<td>4.2 V</td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: OSCCFG</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>FREQSEL</tt></b></td>
+<td><b>Frequency Select</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>FREQSEL_16MHZ</tt></td>
+<td>16 MHz</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>FREQSEL_20MHZ</tt></td>
+<td>20 MHz</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>OSCLOCK</tt></b></td>
+<td><b>Oscillator Lock</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: TCD0CFG</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CMPA</tt></b></td>
+<td><b>Compare A Default Output Value</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CMPB</tt></b></td>
+<td><b>Compare B Default Output Value</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CMPC</tt></b></td>
+<td><b>Compare C Default Output Value</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CMPD</tt></b></td>
+<td><b>Compare D Default Output Value</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CMPAEN</tt></b></td>
+<td><b>Compare A Output Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CMPBEN</tt></b></td>
+<td><b>Compare B Output Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CMPCEN</tt></b></td>
+<td><b>Compare C Output Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CMPDEN</tt></b></td>
+<td><b>Compare D Output Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: SYSCFG0</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>EESAVE</tt></b></td>
+<td><b>EEPROM Save</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SET</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CLEAR</tt></td>
+<td></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>RSTPINCFG</tt></b></td>
+<td><b>Reset Pin Configuration</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>RSTPINCFG_GPIO</tt></td>
+<td>GPIO mode</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>RSTPINCFG_UPDI</tt></td>
+<td>UPDI mode</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>RSTPINCFG_RST</tt></td>
+<td>Reset mode</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CRCSRC</tt></b></td>
+<td><b>CRC Source</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CRCSRC_FLASH</tt></td>
+<td>The CRC is performed on the entire Flash (boot, application code and application data section).</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CRCSRC_BOOT</tt></td>
+<td>The CRC is performed on the boot section of Flash</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CRCSRC_BOOTAPP</tt></td>
+<td>The CRC is performed on the boot and application code section of Flash</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>CRCSRC_NOCRC</tt></td>
+<td>Disable CRC.</td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: SYSCFG1</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>SUT</tt></b></td>
+<td><b>Startup Time</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_0MS</tt></td>
+<td>0 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_1MS</tt></td>
+<td>1 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_2MS</tt></td>
+<td>2 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_4MS</tt></td>
+<td>4 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_8MS</tt></td>
+<td>8 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_16MS</tt></td>
+<td>16 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_32MS</tt></td>
+<td>32 ms</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SUT_64MS</tt></td>
+<td>64 ms</td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: APPEND</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>APPEND</tt></b></td>
+<td><b>Application Code Section End</b></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: BOOTEND</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>BOOTEND</tt></b></td>
+<td><b>Boot Section End</b></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: LOCKBIT</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>LB</tt></b></td>
+<td><b>Lock Bits</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LB_RWLOCK</tt></td>
+<td>Read and write lock</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LB_NOLOCK</tt></td>
+<td>No locks</td>
+</tr>
+</tbody></table>
+<br/>
+</BODY>
+</HTML>

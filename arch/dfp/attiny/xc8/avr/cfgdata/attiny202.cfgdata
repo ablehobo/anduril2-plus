@@ -1,0 +1,165 @@
+# Generated Wed Mar  2 17:18:23 2022
+
+#
+# Copyright (C) 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
+# All rights reserved.
+#
+# This software is developed by Microchip Technology Inc. and its subsidiaries ("Microchip").
+#
+# Redistribution and use in source and binary forms, with or without modification, are
+# permitted provided that the following conditions are met:
+#
+#     1. Redistributions of source code must retain the above copyright notice, this list of
+#        conditions and the following disclaimer.
+#
+#     2. Redistributions in binary form must reproduce the above copyright notice, this list
+#        of conditions and the following disclaimer in the documentation and/or other
+#        materials provided with the distribution. Publication is not required when
+#        this file is used in an embedded application.
+#
+#     3. Microchip's name may not be used to endorse or promote products derived from this
+#        software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+# INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Microchip attiny202 Configuration Word Definitions
+#
+# File Syntax:
+# Each configuration register is given as:
+#
+#     CWORD:<address>:<mask>:<default value>[:<name>[,<alias list>]]
+#
+# for each CWORD the configuration settings are listed as
+#
+#     CSETTING:<mask>:<name>[,<alias list>]:<description>
+#
+# lastly for each CSETTING all possible values are listed as
+#
+#     CVALUE:<value>:<name>[,<alias list>]:<description>
+#
+# All numerical values are given in unqualified hex.  In terms of
+# #pragma config, note the following correspondence:
+#
+#    #pragma config CSETTING<name> = CVALUE<name>
+#
+# Comments are also permitted.  Any line beginning with a '#'
+# character will be treated as a comment.
+
+CWORD:00821280:000000FF:00000000:WDTCFG
+CSETTING:0000000F:PERIOD:Watchdog Timeout Period
+CVALUE:00000000:PERIOD_OFF:Watch-Dog timer Off
+CVALUE:00000001:PERIOD_8CLK:8 cycles (8ms)
+CVALUE:00000002:PERIOD_16CLK:16 cycles (16ms)
+CVALUE:00000003:PERIOD_32CLK:32 cycles (32ms)
+CVALUE:00000004:PERIOD_64CLK:64 cycles (64ms)
+CVALUE:00000005:PERIOD_128CLK:128 cycles (0.128s)
+CVALUE:00000006:PERIOD_256CLK:256 cycles (0.256s)
+CVALUE:00000007:PERIOD_512CLK:512 cycles (0.512s)
+CVALUE:00000008:PERIOD_1KCLK:1K cycles (1.0s)
+CVALUE:00000009:PERIOD_2KCLK:2K cycles (2.0s)
+CVALUE:0000000A:PERIOD_4KCLK:4K cycles (4.1s)
+CVALUE:0000000B:PERIOD_8KCLK:8K cycles (8.2s)
+CSETTING:000000F0:WINDOW:Watchdog Window Timeout Period
+CVALUE:00000000:WINDOW_OFF:Window mode off
+CVALUE:00000001:WINDOW_8CLK:8 cycles (8ms)
+CVALUE:00000002:WINDOW_16CLK:16 cycles (16ms)
+CVALUE:00000003:WINDOW_32CLK:32 cycles (32ms)
+CVALUE:00000004:WINDOW_64CLK:64 cycles (64ms)
+CVALUE:00000005:WINDOW_128CLK:128 cycles (0.128s)
+CVALUE:00000006:WINDOW_256CLK:256 cycles (0.256s)
+CVALUE:00000007:WINDOW_512CLK:512 cycles (0.512s)
+CVALUE:00000008:WINDOW_1KCLK:1K cycles (1.0s)
+CVALUE:00000009:WINDOW_2KCLK:2K cycles (2.0s)
+CVALUE:0000000A:WINDOW_4KCLK:4K cycles (4.1s)
+CVALUE:0000000B:WINDOW_8KCLK:8K cycles (8.2s)
+CWORD:00821281:000000FF:00000000:BODCFG
+CSETTING:00000003:SLEEP:BOD Operation in Sleep Mode
+CVALUE:00000000:SLEEP_DIS:Disabled
+CVALUE:00000001:SLEEP_ENABLED:Enabled
+CVALUE:00000002:SLEEP_SAMPLED:Sampled
+CSETTING:0000000C:ACTIVE:BOD Operation in Active Mode
+CVALUE:00000000:ACTIVE_DIS:Disabled
+CVALUE:00000001:ACTIVE_ENABLED:Enabled
+CVALUE:00000002:ACTIVE_SAMPLED:Sampled
+CVALUE:00000003:ACTIVE_ENWAKE:Enabled with wake-up halted until BOD is ready
+CSETTING:00000010:SAMPFREQ:BOD Sample Frequency
+CVALUE:00000000:SAMPFREQ_1KHz:1kHz sampling frequency
+CVALUE:00000001:SAMPFREQ_125Hz:125Hz sampling frequency
+CSETTING:000000E0:LVL:BOD Level
+CVALUE:00000000:LVL_BODLEVEL0:1.8 V
+CVALUE:00000002:LVL_BODLEVEL2:2.6 V
+CVALUE:00000007:LVL_BODLEVEL7:4.2 V
+CWORD:00821282:000000FF:0000007E:OSCCFG
+CSETTING:00000003:FREQSEL:Frequency Select
+CVALUE:00000001:FREQSEL_16MHZ:16 MHz
+CVALUE:00000002:FREQSEL_20MHZ:20 MHz
+CSETTING:0000007C:reserved:
+CSETTING:00000080:OSCLOCK:Oscillator Lock
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CWORD:00821283:000000FF:000000FF:reserved
+CWORD:00821284:000000FF:00000000:TCD0CFG
+CSETTING:00000001:CMPA:Compare A Default Output Value
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CSETTING:00000002:CMPB:Compare B Default Output Value
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CSETTING:00000004:CMPC:Compare C Default Output Value
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CSETTING:00000008:CMPD:Compare D Default Output Value
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CSETTING:00000010:CMPAEN:Compare A Output Enable
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CSETTING:00000020:CMPBEN:Compare B Output Enable
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CSETTING:00000040:CMPCEN:Compare C Output Enable
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CSETTING:00000080:CMPDEN:Compare D Output Enable
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CWORD:00821285:000000FF:000000F6:SYSCFG0
+CSETTING:00000001:EESAVE:EEPROM Save
+CVALUE:00000001:SET:
+CVALUE:00000000:CLEAR:
+CSETTING:00000002:reserved:
+CSETTING:0000000C:RSTPINCFG:Reset Pin Configuration
+CVALUE:00000000:RSTPINCFG_GPIO:GPIO mode
+CVALUE:00000001:RSTPINCFG_UPDI:UPDI mode
+CVALUE:00000002:RSTPINCFG_RST:Reset mode
+CSETTING:00000030:reserved:
+CSETTING:000000C0:CRCSRC:CRC Source
+CVALUE:00000000:CRCSRC_FLASH:The CRC is performed on the entire Flash (boot, application code and application data section).
+CVALUE:00000001:CRCSRC_BOOT:The CRC is performed on the boot section of Flash
+CVALUE:00000002:CRCSRC_BOOTAPP:The CRC is performed on the boot and application code section of Flash
+CVALUE:00000003:CRCSRC_NOCRC:Disable CRC.
+CWORD:00821286:000000FF:000000FF:SYSCFG1
+CSETTING:00000007:SUT:Startup Time
+CVALUE:00000000:SUT_0MS:0 ms
+CVALUE:00000001:SUT_1MS:1 ms
+CVALUE:00000002:SUT_2MS:2 ms
+CVALUE:00000003:SUT_4MS:4 ms
+CVALUE:00000004:SUT_8MS:8 ms
+CVALUE:00000005:SUT_16MS:16 ms
+CVALUE:00000006:SUT_32MS:32 ms
+CVALUE:00000007:SUT_64MS:64 ms
+CWORD:00821287:000000FF:00000000:APPEND
+CSETTING:000000FF:APPEND:Application Code Section End
+CWORD:00821288:000000FF:00000000:BOOTEND
+CSETTING:000000FF:BOOTEND:Boot Section End
+CWORD:0083128A:000000FF:000000C5:LOCKBIT
+CSETTING:000000FF:LB:Lock Bits
+CVALUE:0000003A:LB_RWLOCK:Read and write lock
+CVALUE:000000C5:LB_NOLOCK:No locks
