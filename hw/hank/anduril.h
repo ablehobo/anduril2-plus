@@ -30,6 +30,8 @@
 #define USE_SOFT_FACTORY_RESET
 
 #define BLINK_AT_RAMP_MIDDLE
+#define BLINK_AT_RAMP_MIDDLE_1 75
+#define BLINK_AT_RAMP_MIDDLE_2 75
 
 #define RGB_SPIN 12 //enable RGB spin mode by 7H
 //#undef RGB_SPIN //disable RGB spin mode
