@@ -113,7 +113,7 @@
 #include "anduril/beacon-mode.h"
 #endif
 
-#if defined (USE_THERMAL_REGULATION) || defined (USE_TEMP_CHECK)
+#ifdef USE_THERMAL_REGULATION
 #include "anduril/tempcheck-mode.h"
 #endif
 
@@ -181,7 +181,7 @@
 #include "anduril/beacon-mode.c"
 #endif
 
-#if defined (USE_THERMAL_REGULATION) || defined (USE_TEMP_CHECK)
+#ifdef USE_THERMAL_REGULATION
 #include "anduril/tempcheck-mode.c"
 #endif
 
@@ -338,7 +338,7 @@ void loop() {
     }
     #endif
 
-    #if defined (USE_THERMAL_REGULATION) || defined (USE_TEMP_CHECK)
+    #ifdef USE_THERMAL_REGULATION
     // TODO: blink out therm_ceil during thermal_config_state?
     else if (state == tempcheck_state) {
         if (cfg.temp_unit == 2) {

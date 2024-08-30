@@ -119,10 +119,10 @@ typedef struct Config {
     #ifdef USE_VOLTAGE_CORRECTION
         uint8_t voltage_correction;
     #endif
-    #if defined (USE_THERMAL_REGULATION) || defined (USE_TEMP_CHECK)
+    #ifdef USE_THERMAL_REGULATION
         uint8_t therm_ceil;
         int8_t therm_cal_offset;
-        uint8_t temp_unit;
+        int8_t temp_unit;  // 1 for °C, 2 for °F
     #endif
 
     ///// aux LEDs
