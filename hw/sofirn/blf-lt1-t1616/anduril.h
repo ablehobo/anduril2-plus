@@ -91,6 +91,11 @@
 #undef USE_THERMAL_REGULATION
 #endif
 
+// still allow use of the thermal sensor for other things
+#define USE_TEMP_CHECK
+
+#define DEFAULT_TEMP_UNIT 2
+
 // don't blink while ramping
 #ifdef BLINK_AT_RAMP_FLOOR
 #undef BLINK_AT_RAMP_FLOOR
