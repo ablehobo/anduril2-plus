@@ -2,7 +2,7 @@
 
 Welcome to my customized fork of the Anduril firmware by ToyKeeper. I’ve added some brilliant new features to make your flashlight even more capable—because who doesn’t want a flashlight that can send secret messages in Morse code? 🌟
 
-The journey began with this [starry repo](https://github.com/starryalley/Anduril2) that adds many enhancemnts like an imroved candle mode, so be sure to check out the project's page for a full list of features that are included in this fork.
+The journey began with this [starry repo](https://github.com/starryalley/Anduril2) that adds many enhancemnts like an improved candle mode, so be sure to check out the project's page for a full list of features that are included in this fork.
 
 Disclaimer: I’m not a professional programmer—just a flashlight enthusiast using Anduril as an excuse to learn C. This project is a hands-on way for me to explore coding, so while I’m having fun, some features might be a bit experimental. Thanks for understanding!
 ## 🌟 New Features & Enhancements
