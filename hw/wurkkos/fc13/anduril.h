@@ -14,4 +14,3 @@
 
 #define USE_MORSE_MODE
 #define MORSE_LEVEL 50
-

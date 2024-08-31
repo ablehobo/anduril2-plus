@@ -1,9 +1,8 @@
-//#include "fsm/spaghetti-monster.h"
+#include "fsm/spaghetti-monster.h"
 #include "anduril/morse-code.h"
-//#include "aux-leds.h"  // Assuming this handles LED blinking
-#include "misc.h"      // Assuming this includes delay functions
+#include "misc.h"  // Assuming this includes delay functions
 
-#define DEFAULT_MORSE_SPEED 100
+#define DEFAULT_MORSE_SPEED 100  // Default speed in milliseconds
 static uint16_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
 
 // Morse code patterns for A-Z
@@ -17,10 +16,12 @@ uint8_t message[MAX_MESSAGE_LENGTH];
 uint8_t message_length = 0;
 
 void init_message() {
-    message[0] = 'A';
-    message[1] = 'B';
-    message[2] = 'C';
-    message_length = 3;
+    if (message_length == 0) {
+        message[0] = 'A';
+        message[1] = 'B';
+        message[2] = 'C';
+        message_length = 3;
+    }
 }
 
 #define INVALID_MORSE_CODE 255
@@ -44,29 +45,29 @@ void store_morse_code_input(uint8_t presses) {
 }
 
 // Blink a short duration (dot)
-void blink_short(uint8_t level) {
-    set_level(level);
-    nice_delay_ms(morse_speed); // Adjust as needed
+void blink_short(uint8_t brightness) {
+    set_level(brightness);
+    nice_delay_ms(morse_speed); // Use the configured speed for dot duration
     set_level(0);
     nice_delay_ms(morse_speed);
 }
 
 // Blink a long duration (dash)
-void blink_long(uint8_t level) {
-    set_level(level);
-    nice_delay_ms(3 * morse_speed); // Adjust as needed
+void blink_long(uint8_t brightness) {
+    set_level(brightness);
+    nice_delay_ms(3 * morse_speed); // Use the configured speed for dash duration
     set_level(0);
     nice_delay_ms(morse_speed);
 }
 
 // Blink Morse code for a single letter
-void blink_morse_code(enum MorseCode letter, uint8_t level) {
+void blink_morse_code(enum MorseCode letter, uint8_t brightness) {
     const char* pattern = morse_pattern[letter - 1];
     while (*pattern) {
         if (*pattern == '.') {
-            blink_short(level);
+            blink_short(brightness);
         } else if (*pattern == '-') {
-            blink_long(level);
+            blink_long(brightness);
         }
         pattern++;
     }
@@ -75,13 +76,13 @@ void blink_morse_code(enum MorseCode letter, uint8_t level) {
 }
 
 // Display the entire Morse code message
-void display_morse_code_message() {
+void display_morse_code_message(uint8_t brightness) {
     for (uint8_t i = 0; i < message_length; i++) {
-        blink_morse_code((enum MorseCode)message[i], DEFAULT_MORSE_SPEED);
+        blink_morse_code((enum MorseCode)message[i], brightness);
     }
 }
 
 // Function to set Morse code speed
 void set_morse_speed(uint16_t speed) {
-    morse_speed = speed;
+    morse_speed = speed * 10;  // Multiply by 10 so users don't have to enter 100+ to slow down
 }
