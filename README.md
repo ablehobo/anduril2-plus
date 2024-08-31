@@ -76,20 +76,20 @@ Run the make script included in this repo. For a full build, simply run ./make. 
 
 Place user-specific overrides in the users/myname/ directory, and the build script will handle the rest. Your personal settings will be applied automatically.
 ### 💻 Flashing Programs
-AVRdude
+#### AVRdude
 
-bash
+   ##### bash
 
-sudo apt install avrdude
+    sudo apt install avrdude
 
-PyMCUprog
+#### PyMCUprog
 
-bash
+   ##### bash
 
-sudo apt install python3 python3-pip python3-venv
-python3 -m venv .venv
-source .venv/bin/activate
-pip install pymcuprog
+    sudo apt install python3 python3-pip python3-venv
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install pymcuprog
 
 Activate the virtual environment with source .venv/bin/activate when using pymcuprog, and deactivate with deactivate when done.
 ### 🤝 Contributing
