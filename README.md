@@ -20,6 +20,10 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
     
   * Message Entry: Easily add characters to your message or start fresh with the "create new message" option in the menu. (1st and 2nd option in 7H menu respectively.
 
+  * Misc. Config Menu: New entry to toggle between Morse Code number output or normal
+
+  * Thermal Config Menu: New option to choose Celsius or Fahrenheight readouts
+
 ### 🔄 State Management
 
   * Seamless Integration: The new Morse code mode is fully integrated into the Anduril state machine, with transitions modeled after the thermal configuration to maintain a consistent user experience.
