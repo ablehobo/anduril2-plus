@@ -18,6 +18,8 @@ enum MorseCode {
 enum MorseCode map_button_to_morse(uint8_t presses);
 void store_morse_code_input(uint8_t presses);
 void display_morse_code_message();
+void set_morse_speed(uint16_t speed);  // Function to set the Morse code speed
+void init_message();                   // Function to initialize the message
 
 // External variables
 extern uint8_t message[MAX_MESSAGE_LENGTH];

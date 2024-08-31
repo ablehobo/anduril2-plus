@@ -366,9 +366,11 @@ void loop() {
     #endif
 
         // Add Morse mode state handling
+    #ifdef USE_MORSE_MODE
     else if (state == morse_state) {
         morse_mode_iter(); 
     }
+    #endif
 
     #if defined(USE_SOS_MODE) && defined(USE_SOS_MODE_IN_BLINKY_GROUP)
     else if (state == sos_state) {
