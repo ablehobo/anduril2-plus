@@ -9,6 +9,7 @@ Disclaimer: I’m not a professional programmer—just a flashlight enthusiast u
 ### 🔠 Morse Code Mode
 
   * Morse Code Messaging: Flashlight communication just got old-school cool! Enter Morse code mode via cycling through the blinkie modes. You can input custom messages by entering the 7H menu and pressing the button a specific number of times for each letter (e.g., 1 press for A, 2 presses for B, etc.). The flashlight will then playback your message, using light to represent dots and dashes.
+    
   * Custom Files:
       * morse_code.c and morse-code.h: These files handle the core logic for mapping button presses to Morse code, storing the messages, and playing them back at user-defined speeds.
       * morse_mode.c and morse-mode.h: These manage the state transitions and configurations within the Morse code mode, ensuring smooth user interaction.
@@ -16,12 +17,15 @@ Disclaimer: I’m not a professional programmer—just a flashlight enthusiast u
 ### 🎛️ Menu Enhancements
 
   * Flutter Feedback: Added visual feedback (fluttering light) to confirm entry and exit from Morse code mode, making sure you’re never left in the dark about which mode you’re in.
+    
   * Morse Code Speed Configuration: Adjust the playback speed of your Morse code messages to match your preferred signaling tempo. (3rd option in 7H menu)
+    
   * Message Entry: Easily add characters to your message or start fresh with the "create new message" option in the menu. (1st and 2nd option in 7H menu respectively.
 
 ### 🔄 State Management
 
   * Seamless Integration: The new Morse code mode is fully integrated into the Anduril state machine, with transitions modeled after the thermal configuration to maintain a consistent user experience.
+    
   * Error Handling: Proper handling of invalid Morse code inputs ensures that only valid characters (A-Z) are processed, with graceful recovery from out-of-range inputs.
 
 ### 🎨 Special Effects for Hank Lights
