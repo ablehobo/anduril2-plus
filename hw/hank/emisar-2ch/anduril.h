@@ -98,3 +98,5 @@
 //#ifdef BLINK_AT_RAMP_MIDDLE
 //#undef BLINK_AT_RAMP_MIDDLE
 //#endif
+
+#define USE_MORSE_MODE

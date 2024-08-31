@@ -13,15 +13,13 @@ const char* morse_pattern[] = {
 };
 
 uint8_t message[MAX_MESSAGE_LENGTH];
-uint8_t message_length = 0;
+uint8_t message_length = 254;
 
 void init_message() {
-    if (message_length == 0) {
         message[0] = 'A';
         message[1] = 'B';
         message[2] = 'C';
         message_length = 3;
-    }
 }
 
 #define INVALID_MORSE_CODE 255
