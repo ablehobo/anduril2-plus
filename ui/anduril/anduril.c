@@ -150,9 +150,13 @@
 #include "anduril/smooth-steps.h"
 #endif
 
+#include "fsm/events.h"  // for Morse code mode; I don't know if this is the best place to add it
+
+#include "anduril/morse-mode.h"     // Morse code mode header
+#include "anduril/morse-code.h"     // Morse code logic header
+
 // this should be last, so other headers have a chance to declare values
 #include "anduril/load-save-config.h"
-
 
 /********* Include all the app logic source files *********/
 // (is a bit weird to do things this way,
@@ -217,6 +221,8 @@
 #include "anduril/smooth-steps.c"
 #endif
 
+#include "anduril/morse-mode.c"     // Morse code mode
+#include "anduril/morse-code.c"     // Morse code logic
 
 // runs one time at boot, when power is connected
 void setup() {
@@ -284,6 +290,10 @@ void loop() {
 
     // "current_state" is volatile, so cache it to reduce code size
     StatePtr state = current_state;
+
+   //0 Event event = get_event();  // Fetch the next event (e.g., button press)
+    //uint16_t arg = get_arg();   // Fetch any argument associated with the event
+
 
     #ifdef USE_AUX_RGB_LEDS_WHILE_ON
     // display battery charge on RGB button during use
@@ -354,6 +364,11 @@ void loop() {
         beacon_mode_iter();
     }
     #endif
+
+        // Add Morse mode state handling
+    else if (state == morse_state) {
+        morse_mode_iter(); 
+    }
 
     #if defined(USE_SOS_MODE) && defined(USE_SOS_MODE_IN_BLINKY_GROUP)
     else if (state == sos_state) {

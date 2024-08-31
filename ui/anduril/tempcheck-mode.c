@@ -18,8 +18,12 @@ uint8_t tempcheck_state(Event event, uint16_t arg) {
         set_state(beacon_state, 0);
         #elif defined(USE_SOS_MODE) && defined(USE_SOS_MODE_IN_BLINKY_GROUP)
         set_state(sos_state, 0);
+        #elif defined(USE_MORSE_MODE)
+        set_state(morse_state, 0);
         #elif defined(USE_BATTCHECK)
         set_state(battcheck_state, 0);
+        #elif defined(USE_THERMAL_REGULATION)
+        set_state(tempcheck_state, 0);
         #endif
         return EVENT_HANDLED;
     }
