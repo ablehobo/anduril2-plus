@@ -3,20 +3,14 @@
 #include "fsm/spaghetti-monster.h"
 #include "anduril/morse-mode.h"
 #include "anduril/morse-code.h"
-#include "aux-leds.h"  // Assuming this handles LED blinking
-#include "misc.h"      // Assuming this includes delay functions
+#include "aux-leds.h"
+#include "misc.h"
 
 
 inline void morse_mode_iter() {
-    // one iteration of main loop in Morse mode
-    /*if (!button_last_state) {
-        display_morse_code_message();
-        nice_delay_ms(1000); // Adjust delay as needed
-    }*/
-   set_level(50);
-   blink_once();
-   blink_once();
-   set_level(10);
+    // Execute Morse code playback in main loop
+    display_morse_code_message();
+    nice_delay_ms(1000); // Adjust delay as needed
 }
 
 // Morse Code State: Handles mode selection and playback
@@ -26,13 +20,13 @@ uint8_t morse_state(Event event, uint16_t arg) {
         set_state(off_state, 0);
         return EVENT_HANDLED;
     }
-    // 2 clicks: Switch to next blinkie mode
+    // 2 clicks: Switch to the next blinkie mode
     else if (event == EV_2clicks) {
         #if defined(USE_BATTCHECK)
             set_state(battcheck_state, 0);
         #elif defined (USE_THERMAL_REGULATION) || defined (USE_BATTCHECK)
             set_state(battcheck_state, 0);
-        #if defined(USE_BEACON_MODE)
+        #elif defined(USE_BEACON_MODE)
             set_state(beacon_state, 0);
         #elif defined(USE_SOS_MODE) && defined(USE_SOS_MODE_IN_BLINKY_GROUP)
             set_state(sos_state, 0);
