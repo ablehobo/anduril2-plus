@@ -13,25 +13,29 @@ inline void morse_mode_iter() {
         display_morse_code_message();
         nice_delay_ms(1000); // Adjust delay as needed
     }*/
+   set_level(50);
    blink_once();
    blink_once();
+   set_level(10);
 }
 
 // Morse Code State: Handles mode selection and playback
 uint8_t morse_state(Event event, uint16_t arg) {
     // 1 click: Turn off Morse mode
-    if (event == EV_click1_press) {
+    if (event == EV_1click) {
         set_state(off_state, 0);
         return EVENT_HANDLED;
     }
     // 2 clicks: Switch to next blinkie mode
-    else if (event == EV_click2_press) {
+    else if (event == EV_2clicks) {
+        #if defined(USE_BATTCHECK)
+            set_state(battcheck_state, 0);
+        #elif defined (USE_THERMAL_REGULATION) || defined (USE_BATTCHECK)
+            set_state(battcheck_state, 0);
         #if defined(USE_BEACON_MODE)
             set_state(beacon_state, 0);
         #elif defined(USE_SOS_MODE) && defined(USE_SOS_MODE_IN_BLINKY_GROUP)
             set_state(sos_state, 0);
-        #elif defined(USE_BATTCHECK)
-            set_state(battcheck_state, 0);
         #endif
         return EVENT_HANDLED;
     }
