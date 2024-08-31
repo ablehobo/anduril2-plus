@@ -4,7 +4,7 @@ Welcome to my customized fork of the Anduril firmware by ToyKeeper. I’ve added
 
 The journey began with this [starry repo](https://github.com/starryalley/Anduril2) that adds many enhancemnts like an improved candle mode, so be sure to check out the project's page for a full list of features that are included in this fork.
 
-Disclaimer: I’m not a professional programmer—just a flashlight enthusiast using Anduril as an excuse to learn C. This project is a hands-on way for me to explore coding, so while I’m having fun, some features might be a bit experimental. Thanks for understanding!
+**Disclaimer:** I’m not a professional programmer—just a flashlight enthusiast using Anduril as an excuse to learn C. This project is a hands-on way for me to explore coding, so while I’m having fun, some features might be a bit experimental. Thanks for understanding!
 ## 🌟 New Features & Enhancements
 ### 🔠 Morse Code Mode
 
@@ -15,8 +15,6 @@ Disclaimer: I’m not a professional programmer—just a flashlight enthusiast u
       * morse_mode.c and morse-mode.h: These manage the state transitions and configurations within the Morse code mode, ensuring smooth user interaction.
 
 ### 🎛️ Menu Enhancements
-
-  * Flutter Feedback: Added visual feedback (fluttering light) to confirm entry and exit from Morse code mode, making sure you’re never left in the dark about which mode you’re in.
     
   * Morse Code Speed Configuration: Adjust the playback speed of your Morse code messages to match your preferred signaling tempo. (3rd option in 7H menu)
     
