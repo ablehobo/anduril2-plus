@@ -84,5 +84,6 @@ void display_morse_code_message(uint8_t brightness) {
 
 // Function to set Morse code speed
 void set_morse_speed(uint16_t speed) {
-    morse_speed = speed * 10;  // Multiply by 10 so users don't have to enter 100+ to slow down
+    morse_speed = speed + 95;  // 5 clicks is default speed
+    display_morse_code_message(memorized_level);
 }
