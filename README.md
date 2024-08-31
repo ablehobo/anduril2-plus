@@ -41,7 +41,7 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
       * 'Pulse' Blink Pattern: A new blink pattern that alternates between off, high, and low brightness—perfect for those who want to create a rhythm with their light.
 
   * Moonlight Mode Adjustment:
-      *Lowered Moonlight Floor: Achieved a dimmer moonlight mode, giving you a subtle and softer light in low-light situations.
+      * Lowered Moonlight Floor: Achieved a dimmer moonlight mode, giving you a subtle and softer light in low-light situations.
 
   * Dual Channel Hank Lights Channel Swap:
       * Swapped CH1 and CH2 on dual channel Hank lights because atleast the two I have are opposite from how I configured them on the website
@@ -51,6 +51,9 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
 
   * RGB Cycle Adjustment:
       * White Color Addition: Expanded the RGB cycle to include white, giving you more color options in disco, rainbow, and other color patterns.
+   
+  * Mid-ramp Blink:
+      * Enabled mid-ramp blink
 
   * Temperature Output Modification:
         * Fahrenheit Option: Toggle between Celsius and Fahrenheit in temperature readouts with a simple configuration option placed after thermal calibration.
