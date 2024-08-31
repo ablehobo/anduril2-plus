@@ -1,9 +1,8 @@
-#include "fsm/spaghetti-monster.h"
-#include "anduril/morse-code.h"
+#include "morse-code.h"
 #include "misc.h"  // Assuming this includes delay functions
 
-#define DEFAULT_MORSE_SPEED 100  // Default speed in milliseconds
-static uint16_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
+// Define the morse_speed variable
+uint16_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
 
 // Morse code patterns for A-Z
 const char* morse_pattern[] = {
@@ -16,13 +15,11 @@ uint8_t message[MAX_MESSAGE_LENGTH];
 uint8_t message_length = 254;
 
 void init_message() {
-        message[0] = 'A';
-        message[1] = 'B';
-        message[2] = 'C';
-        message_length = 3;
+    message[0] = A;
+    message[1] = B;
+    message[2] = C;
+    message_length = 3;
 }
-
-#define INVALID_MORSE_CODE 255
 
 enum MorseCode map_button_to_morse(uint8_t presses) {
     if (presses >= 1 && presses <= 26) {
@@ -82,6 +79,22 @@ void display_morse_code_message(uint8_t brightness) {
 
 // Function to set Morse code speed
 void set_morse_speed(uint16_t speed) {
-    morse_speed = speed * 20;  // 5 clicks is default speed
-    display_morse_code_message(memorized_level);
+    morse_speed = speed;
+}
+
+void morse_config_save(uint8_t step, uint8_t value) {
+    if (value) {
+        // Step 1: Add Next Character
+        if (step == 1) {
+            store_morse_code_input(value);
+        }
+        // Step 2: Create New Message (Clear existing message)
+        else if (step == 2) {
+            message_length = 0;  // Clear the message
+        }
+        // Step 3: Morse Code Playback Speed
+        else if (step == 3) {
+            set_morse_speed(value);
+        }
+    }
 }

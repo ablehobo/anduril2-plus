@@ -1,11 +1,8 @@
 // morse-mode.c: Morse code mode for Anduril.
 
-//#include "fsm/spaghetti-monster.h"
 #include "anduril/morse-mode.h"
 #include "anduril/morse-code.h"
-//#include "aux-leds.h"
 #include "misc.h"
-
 
 inline void morse_mode_iter() {
     if (message_length == 254) {
@@ -18,53 +15,61 @@ inline void morse_mode_iter() {
 
 // Morse Code State: Handles mode selection and playback
 uint8_t morse_state(Event event, uint16_t arg) {
+    static int8_t speed_direction = 1;
+
+    // Enter Morse code mode
+    if (event == EV_enter_state) {
+        speed_direction = 1;  // Default to increasing speed
+        return EVENT_HANDLED;
+    }
     // 1 click: Turn off Morse mode
-    if (event == EV_1click) {
+    else if (event == EV_1click) {
         set_state(off_state, 0);
         return EVENT_HANDLED;
     }
     // 2 clicks: Switch to the next blinkie mode
     else if (event == EV_2clicks) {
-        #if defined(USE_BATTCHECK)
-            set_state(battcheck_state, 0);
-        #elif defined (USE_THERMAL_REGULATION) || defined (USE_BATTCHECK)
-            set_state(battcheck_state, 0);
-        #elif defined(USE_BEACON_MODE)
-            set_state(beacon_state, 0);
-        #elif defined(USE_SOS_MODE) && defined(USE_SOS_MODE_IN_BLINKY_GROUP)
-            set_state(sos_state, 0);
-        #endif
+        set_state(beacon_state, 0);
         return EVENT_HANDLED;
     }
-    // 7H: Enter Morse code input mode
+    // Hold: Increase speed
+    else if (event == EV_click1_hold) {
+        if (morse_speed > 60) {  // Avoid going too fast
+            morse_speed -= 1.5 * speed_direction;  // Decrease speed more slowly
+        }
+        return EVENT_HANDLED;
+    }
+    // Hold release: Reverse speed direction (for next hold)
+    else if (event == EV_click1_hold_release) {
+        speed_direction = -speed_direction;
+        save_config();  // Save the current speed setting
+        return EVENT_HANDLED;
+    }
+    // Hold: Decrease speed
+    else if (event == EV_click2_hold) {
+        if (morse_speed < 200) {  // Avoid going too slow
+            morse_speed += 1.5 * speed_direction;  // Increase speed more slowly
+        }
+        return EVENT_HANDLED;
+    }
+    // Hold release: Save the current speed setting
+    else if (event == EV_click2_hold_release) {
+        save_config();
+        return EVENT_HANDLED;
+    }
+    // Reset speed
+    else if (event == EV_click3_hold) {
+        set_morse_speed(DEFAULT_MORSE_SPEED);
+        save_config();
+        return EVENT_HANDLED;
+    }
+    // Enter the 7H menu for configuring Morse code options
     else if (event == EV_click7_hold) {
         push_state(morse_config_state, 0);
         return EVENT_HANDLED;
     }
-    // Long press: Playback Morse code message
-    else if (event == EV_click1_hold) {
-        display_morse_code_message(memorized_level);
-        return EVENT_HANDLED;
-    }
-    return EVENT_NOT_HANDLED;
-}
 
-// Function to save the configuration after the user has entered it
-void morse_config_save(uint8_t step, uint8_t value) {
-    if (value) {
-        // Step 1: Add Next Character
-        if (step == 1) {
-            store_morse_code_input(value);
-        }
-        // Step 2: Create New Message (Clear existing message)
-        else if (step == 2) {
-            message_length = 0;  // Clear the message
-        }
-        // Step 3: Morse Code Playback Speed
-        else if (step == 3) {
-            set_morse_speed(value);
-        }
-    }
+    return EVENT_NOT_HANDLED;
 }
 
 // The main configuration function using `config_state_base`
