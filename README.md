@@ -34,24 +34,28 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
 
   * Spin RGB Animation: Hank lights like the D4K now have a unique spin RGB animation. This effect cycles through red, green, and blue, creating the illusion that the button is spinning—a visual treat that adds flair to your flashlight!
 
-### 🔧 Prior Modifications
+### 🔧 Other Modifications
 
   * Blink Pattern Enhancements:
       * 'Splat' Pattern: A cross between disco and rainbow, this pattern brings a lively burst of color to your flashlight’s repertoire.
       * 'Pulse' Blink Pattern: A new blink pattern that alternates between off, high, and low brightness—perfect for those who want to create a rhythm with their light.
 
-    * Moonlight Mode Adjustment:
-        *Lowered Moonlight Floor: Achieved a dimmer moonlight mode, giving you a subtle and softer light in low-light situations.
+  * Moonlight Mode Adjustment:
+      *Lowered Moonlight Floor: Achieved a dimmer moonlight mode, giving you a subtle and softer light in low-light situations.
 
-    * Lockout Mode Enhancements:
-        * Mid and Turbo Activation: In lockout mode, a 5H activates momentary mid-level, and a 6H activates momentary turbo, providing quick access to higher brightness without unlocking.
+  * Dual Channel Hank Lights Channel Swap:
+      * Swapped CH1 and CH2 on dual channel Hank lights because atleast the two I have are opposite from how I configured them on the website
 
-   * RGB Cycle Adjustment:
-       * White Color Addition: Expanded the RGB cycle to include white, giving you more color options in disco, rainbow, and other color patterns.
+  * Lockout Mode Enhancements:
+      * Mid and Turbo Activation: In lockout mode, a 5H activates momentary mid-level, and a 6H activates momentary turbo, providing quick access to higher brightness without unlocking.
 
-   * Temperature Output Modification:
+  * RGB Cycle Adjustment:
+      * White Color Addition: Expanded the RGB cycle to include white, giving you more color options in disco, rainbow, and other color patterns.
+
+  * Temperature Output Modification:
         * Fahrenheit Option: Toggle between Celsius and Fahrenheit in temperature readouts with a simple configuration option placed after thermal calibration.
-        * Tempcheck Mode for Non-Regulated Devices: Enabled tempcheck mode on devices without thermal regulation, such as the BLF LT1 with an attiny1616. This feature is still a work in progress as I continue experimenting.
+        
+  * Tempcheck Mode for Non-Regulated Devices: Enabled tempcheck mode on devices without thermal regulation, such as the BLF LT1 with an attiny1616. This feature is still a work in progress as I continue experimenting.
 
 ### 🛠️ What Is Anduril? And What's FSM?
 
