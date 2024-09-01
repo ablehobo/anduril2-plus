@@ -108,8 +108,10 @@ void morse_config_save(uint8_t step, uint8_t value) {
         if (step == 1) {
             store_morse_code_input(value);
         } else if (step == 2) {
-            message_length = 0;
+            message_length = message_length > 0 ? message_length - 1 : 0;
         } else if (step == 3) {
+            message_length = 0;
+        } else if (step == 4) {
             set_morse_speed(value * 20);
         }
     }

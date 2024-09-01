@@ -44,7 +44,7 @@ uint8_t morse_state(Event event, uint16_t arg) {
 
 
 uint8_t morse_config_state(Event event, uint16_t arg) {
-    return config_state_base(event, arg, 3, morse_config_save);
+    return config_state_base(event, arg, 4, morse_config_save);
 }
 
 uint8_t morse_input_state(Event event, uint16_t arg) {
