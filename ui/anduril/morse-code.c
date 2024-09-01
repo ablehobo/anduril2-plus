@@ -4,6 +4,7 @@
 
 // Define the morse_speed variable
 uint8_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
+uint8_t message_length = INVALID_MORSE_CODE; // Default to invalid message so init runs
 
 // Compressed Morse code patterns stored as 16-bit integers
 static const uint16_t morse_pattern_compressed[] = {
@@ -67,7 +68,6 @@ void decode_morse_pattern(MorseCode letter_index, uint8_t brightness) {
 }
 
 uint8_t message[MAX_MESSAGE_LENGTH];
-uint8_t message_length = 254;
 
 void init_message(void) {
     message[0] = 0; // A

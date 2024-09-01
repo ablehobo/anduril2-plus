@@ -15,7 +15,7 @@ uint8_t morse_state(Event event, uint16_t arg) {
         return EVENT_HANDLED;
     } else if (event == EV_click1_hold) {
         if (morse_speed > 10) {
-            morse_speed -= 10 * speed_direction;
+            morse_speed -= 2 * speed_direction;
         }
         return EVENT_HANDLED;
     } else if (event == EV_click1_hold_release) {
@@ -24,7 +24,7 @@ uint8_t morse_state(Event event, uint16_t arg) {
         return EVENT_HANDLED;
     } else if (event == EV_click2_hold) {
         if (morse_speed < 250) {
-            morse_speed += 10 * speed_direction;
+            morse_speed += 2 * speed_direction;
         }
         return EVENT_HANDLED;
     } else if (event == EV_click2_hold_release) {
@@ -34,10 +34,14 @@ uint8_t morse_state(Event event, uint16_t arg) {
         set_morse_speed(DEFAULT_MORSE_SPEED);
         save_config();
         return EVENT_HANDLED;
+    } else if (event == EV_click7_hold) {
+        push_state(morse_config_state, 0);
+        return EVENT_HANDLED;
     }
 
     return EVENT_NOT_HANDLED;
 }
+
 
 uint8_t morse_config_state(Event event, uint16_t arg) {
     return config_state_base(event, arg, 3, morse_config_save);
@@ -86,7 +90,13 @@ uint8_t morse_input_state(Event event, uint16_t arg) {
 }
 
 void morse_mode_iter(void) {
-    if (message_length > 0) {
+    if (message_length == INVALID_MORSE_CODE) {
+        set_level(10);
+        nice_delay_ms(50);
+        set_level(0);
+        nice_delay_ms(50);
+        init_message();
+    } else {    
         display_morse_code_message(memorized_level);
         nice_delay_ms(1000); // Adjust delay as needed
     }

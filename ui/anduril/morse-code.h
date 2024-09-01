@@ -5,7 +5,7 @@
 
 #define INVALID_MORSE_CODE 255 // Invalid Morse code
 #define DEFAULT_MORSE_SPEED 125 // Default speed in milliseconds
-#define MAX_MESSAGE_LENGTH 100
+#define MAX_MESSAGE_LENGTH 100 // Maximum message length
 
 // Morse Code enumerator definition using a smaller type
 typedef uint8_t MorseCode;
