@@ -17,7 +17,7 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
 ### 🎛️ Menu Enhancements
     
   * Morse Code Speed Configuration: Adjust the playback speed of your Morse code messages to match your preferred signaling tempo. (3rd option in 7H menu)
-    * **Now** can be adjusted by 1H and 2H like smooth ramping; I can not get this to fit on Hank lights currently; Tested on FC13 
+    * **Now** can be adjusted by 1H and 2H like smooth ramping; I just barely got everything to fit on the emisar-2ch-fet image. 
     
   * Message Entry: Easily add characters to your message or start fresh with the "create new message" option in the menu. (1st and 2nd option in 7H menu respectively.
 
