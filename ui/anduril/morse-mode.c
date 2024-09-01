@@ -11,11 +11,11 @@ uint8_t morse_state(Event event, uint16_t arg) {
         set_state(off_state, 0);
         return EVENT_HANDLED;
     } else if (event == EV_2clicks) {
-        set_state(beacon_state, 0);
+        set_state(battcheck_state, 0);
         return EVENT_HANDLED;
     } else if (event == EV_click1_hold) {
         if (morse_speed > 10) {
-            morse_speed -= 2 * speed_direction;
+            morse_speed -= 1 * speed_direction;
         }
         return EVENT_HANDLED;
     } else if (event == EV_click1_hold_release) {
@@ -23,8 +23,8 @@ uint8_t morse_state(Event event, uint16_t arg) {
         save_config();
         return EVENT_HANDLED;
     } else if (event == EV_click2_hold) {
-        if (morse_speed < 250) {
-            morse_speed += 2 * speed_direction;
+        if (morse_speed < 160) {
+            morse_speed += 1 * speed_direction;
         }
         return EVENT_HANDLED;
     } else if (event == EV_click2_hold_release) {
