@@ -57,14 +57,14 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
       * Enabled mid-ramp blink
 
   * Temperature Output Modification:
-        * Fahrenheit Option: Toggle between Celsius and Fahrenheit in temperature readouts with a simple configuration option placed after thermal calibration.
+      * Fahrenheit Option: Toggle between Celsius and Fahrenheit in temperature readouts with a simple configuration option placed after thermal calibration.
         
   * Tempcheck Mode for Non-Regulated Devices: Enabled tempcheck mode on devices without thermal regulation, such as the BLF LT1 with an attiny1616. This feature is still a work in progress as I continue experimenting.
 
 ### 🛠️ What Is Anduril? And What's FSM?
 
 Anduril is the ultimate flashlight UI, powered by FSM (Flashlight Spaghetti Monster), which makes controlling your flashlight as easy as untangling a well-organized flowchart.
-🔧 Firmware Flashing: Stay Up to Date
+### 🔧 Firmware Flashing: Stay Up to Date
 
 Flashing your firmware has never been easier. Grab the latest .hex file here and follow the steps to update your light.
 Required Tools:
