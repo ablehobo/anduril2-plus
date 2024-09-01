@@ -110,7 +110,7 @@ void morse_config_save(uint8_t step, uint8_t value) {
         } else if (step == 2) {
             message_length = 0;
         } else if (step == 3) {
-            set_morse_speed(value);
+            set_morse_speed(value * 20);
         }
     }
 }
