@@ -111,3 +111,5 @@
 // for consistency with other models
 #define USE_SOFT_FACTORY_RESET
 
+#define USE_MORSE_MODE
+
