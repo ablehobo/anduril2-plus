@@ -56,7 +56,7 @@ void decode_morse_pattern(MorseCode letter_index, uint8_t brightness) {
 
     for (int i = length - 1; i >= 0; i--) {
         if (letter_index == 26) {
-            nice_delay_ms(3 * morse_speed);  // Inter-word gap
+            nice_delay_ms(6 * morse_speed);  // Inter-word gap
             return;
         } else if (pattern & (1 << i)) {  // Dash
             if (pattern & (1 << (i - 1))) {
