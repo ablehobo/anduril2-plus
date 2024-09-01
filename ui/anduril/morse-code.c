@@ -55,7 +55,10 @@ void decode_morse_pattern(MorseCode letter_index, uint8_t brightness) {
     uint8_t length = morse_pattern_lengths[letter_index];
 
     for (int i = length - 1; i >= 0; i--) {
-        if (pattern & (1 << i)) {  // Dash
+        if (letter_index == 26) {
+            nice_delay_ms(3 * morse_speed);  // Inter-word gap
+            return;
+        } else if (pattern & (1 << i)) {  // Dash
             if (pattern & (1 << (i - 1))) {
                 blink(brightness, 3); // Dash is three units
                 i--;  // Skip next bit as part of dash
@@ -79,6 +82,8 @@ void init_message(void) {
 MorseCode map_button_to_morse(uint8_t presses) {
     if (presses >= 1 && presses <= 26) {
         return presses - 1;  // Mapping 1 to A, 2 to B, etc.
+    } else if (presses == 30) { //30 here because it is easy to get to by 3x1H
+        return 26;  // Space
     } else {
         return INVALID_MORSE_CODE; // Invalid input
     }
