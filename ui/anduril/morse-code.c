@@ -3,11 +3,7 @@
 #include <stdint.h>
 
 // Define the morse_speed variable
-uint16_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
-
-// Forward declarations
-void blink_short(uint8_t brightness);
-void blink_long(uint8_t brightness);
+uint8_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
 
 const uint16_t morse_pattern_compressed[] = {
     // Morse code patterns compressed into a single uint16_t (16 bits)
@@ -52,10 +48,10 @@ void decode_morse_pattern(uint8_t letter_index, uint8_t level) {
     for (int i = length - 1; i >= 0; i--) {
         if (pattern & (1 << i)) {  // If bit is set, it's a dash
             if (pattern & (1 << (i - 1))) {
-                blink_long(level);
+                blink(level, 3);  // Long blink (dash) with a duration multiplier of 3
                 i--;  // Skip the next bit since it was part of the dash
             } else {
-                blink_short(level);  // Dot
+                blink(level, 1);  // Short blink (dot) with a duration multiplier of 1
             }
         }
         // Insert inter-element delay
@@ -64,6 +60,7 @@ void decode_morse_pattern(uint8_t letter_index, uint8_t level) {
     // Delay between letters
     nice_delay_ms(3 * morse_speed);
 }
+
 
 uint8_t message[MAX_MESSAGE_LENGTH];
 uint8_t message_length = 254;
@@ -93,32 +90,24 @@ void store_morse_code_input(uint8_t presses) {
     }
 }
 
-// Blink a short duration (dot)
-void blink_short(uint8_t brightness) {
+void blink(uint8_t brightness, uint16_t duration_multiplier) {
     set_level(brightness);
-    nice_delay_ms(morse_speed); // Use the configured speed for dot duration
+    nice_delay_ms(morse_speed * duration_multiplier);  // Use the configured speed and duration multiplier
     set_level(0);
-    nice_delay_ms(morse_speed);
+    nice_delay_ms(morse_speed);  // Inter-element delay
 }
 
-// Blink a long duration (dash)
-void blink_long(uint8_t brightness) {
-    set_level(brightness);
-    nice_delay_ms(3 * morse_speed); // Use the configured speed for dash duration
-    set_level(0);
-    nice_delay_ms(morse_speed);
-}
 
 // Display the entire Morse code message
 void display_morse_code_message(uint8_t brightness) {
     for (uint8_t i = 0; i < message_length; i++) {
-        decode_morse_pattern(message[i] - 1, brightness);  // Use decode_morse_pattern instead
+        decode_morse_pattern((enum MorseCode)message[i], brightness);
     }
 }
 
 
 // Function to set Morse code speed
-void set_morse_speed(uint16_t speed) {
+void set_morse_speed(uint8_t speed) {
     morse_speed = speed;
 }
 
