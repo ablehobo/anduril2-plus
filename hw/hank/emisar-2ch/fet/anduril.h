@@ -110,3 +110,10 @@
 //#endif
 
 #define USE_MORSE_MODE
+
+#ifdef USE_SOS_MODE
+#undef USE_SOS_MODE
+#endif
+#ifdef USE_SOS_MODE_IN_BLINKY_GROUP
+#undef USE_SOS_MODE_IN_BLINKY_GROUP
+#endif

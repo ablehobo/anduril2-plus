@@ -35,3 +35,10 @@
 
 #define RGB_SPIN 12 //enable RGB spin mode by 7H
 //#undef RGB_SPIN //disable RGB spin mode
+
+#ifdef USE_SOS_MODE
+#undef USE_SOS_MODE
+#endif
+#ifdef USE_SOS_MODE_IN_BLINKY_GROUP
+#undef USE_SOS_MODE_IN_BLINKY_GROUP
+#endif
