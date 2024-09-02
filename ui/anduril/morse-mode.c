@@ -34,7 +34,7 @@ uint8_t morse_state(Event event, uint16_t arg) {
         set_morse_speed(DEFAULT_MORSE_SPEED);
         save_config();
         return EVENT_HANDLED;
-    } else if (event == EV_click7_hold) {
+    } else if (event == EV_click4_hold) {
         push_state(morse_config_state, 0);
         return EVENT_HANDLED;
     }
