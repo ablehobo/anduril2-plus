@@ -111,4 +111,4 @@
 
 #define USE_MORSE_MODE
 
-#undef USE_SOS_MODE
+//#undef USE_SOS_MODE
