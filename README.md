@@ -8,7 +8,7 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
 ## 🌟 New Features & Enhancements
 ### 🔠 Morse Code Mode
 
-  * Morse Code Messaging: Flashlight communication just got old-school cool! Enter Morse code mode via cycling through the blinkie modes. You can input custom messages by entering the 4H menu and pressing the button a specific number of times for each letter (e.g., 1 press for A, 2 presses for B, etc.). The 10-click shortcut works here too. 30 clicks is a space (3x1H). The flashlight will then playback your message, using light to represent dots and dashes.
+  * Morse Code Messaging: Flashlight communication just got old-school cool! Enter Morse code mode via cycling through the blinkie modes. You can input custom messages by entering the 4H menu.  The menu order is: 1-Letter Entry, 2-Backspace, 3-Message Clear, 4-Speed Control. Letter entry works by clicking the number of times for each letter (e.g., 1 press for A, 2 presses for B, etc.). The 10-click shortcut works here too. 30 clicks is a space (3x1H). The flashlight will then playback your message, using light to represent dots and dashes.
     
   * Custom Files:
       * morse_code.c and morse-code.h: These files handle the core logic for mapping button presses to Morse code, storing the messages, and playing them back at user-defined speeds.
@@ -16,14 +16,14 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
 
 ### 🎛️ Menu Enhancements
     
-  * Morse Code Speed Configuration: Adjust the playback speed of your Morse code messages to match your preferred signaling tempo. (3rd option in 4H menu)
+  * Morse Code Speed Configuration: Adjust the playback speed of your Morse code messages to match your preferred signaling tempo. (4th option in 4H menu)
     * **Now** can be adjusted by 1H and 2H like smooth ramping
     
-  * Message Entry: Easily add characters to your message or start fresh with the "create new message" option in the menu. (1st and 2nd option in 7H menu respectively.
+  * Message Entry: Easily add characters to your message or start fresh with the "create new message" option in the menu. (1st and 3rd option in 4H menu respectively)
 
-  * Misc. Config Menu: New entry to toggle between Morse Code number output or normal
+  * Misc. Config Menu: New entry to toggle between Morse Code number output or normal for battery voltage and temperature readouts
 
-  * Thermal Config Menu: New option to choose Celsius or Fahrenheight readouts
+  * Thermal Config Menu: New option after thermal calibration option to choose Celsius (1C) or Fahrenheight (2C) for readouts (calibration is still done in Celsius even if Fahrenheight output is selected)
 
 ### 🔄 State Management
 
