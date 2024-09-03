@@ -7,11 +7,6 @@ uint8_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
 uint8_t message_length = INVALID_MORSE_CODE; // Default to invalid message so init runs
 
 typedef struct {
-    uint8_t pattern;  // Stores the bitfield for the Morse code pattern
-    uint8_t length;   // Number of elements in the Morse code pattern
-} MorseCodePattern;
-
-typedef struct {
     uint8_t sequence[4];  // Max length of Morse code is 4 elements
     uint8_t length;       // Number of elements in the sequence
 } PreProcessedMorseCode;
