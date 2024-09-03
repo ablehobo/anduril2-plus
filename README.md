@@ -8,7 +8,7 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
 ## 🌟 New Features & Enhancements
 ### 🔠 Morse Code Mode
 
-  * Morse Code Messaging: Flashlight communication just got old-school cool! Enter Morse code mode via cycling through the blinkie modes. You can input custom messages by entering the 7H menu and pressing the button a specific number of times for each letter (e.g., 1 press for A, 2 presses for B, etc.). The flashlight will then playback your message, using light to represent dots and dashes.
+  * Morse Code Messaging: Flashlight communication just got old-school cool! Enter Morse code mode via cycling through the blinkie modes. You can input custom messages by entering the 4H menu and pressing the button a specific number of times for each letter (e.g., 1 press for A, 2 presses for B, etc.). The 10-click shortcut works here too. 30 clicks is a space (3x1H). The flashlight will then playback your message, using light to represent dots and dashes.
     
   * Custom Files:
       * morse_code.c and morse-code.h: These files handle the core logic for mapping button presses to Morse code, storing the messages, and playing them back at user-defined speeds.
@@ -16,8 +16,8 @@ The journey began with this [starry repo](https://github.com/starryalley/Anduril
 
 ### 🎛️ Menu Enhancements
     
-  * Morse Code Speed Configuration: Adjust the playback speed of your Morse code messages to match your preferred signaling tempo. (3rd option in 7H menu)
-    * **Now** can be adjusted by 1H and 2H like smooth ramping; I just barely got everything to fit on the emisar-2ch-fet image. 
+  * Morse Code Speed Configuration: Adjust the playback speed of your Morse code messages to match your preferred signaling tempo. (3rd option in 4H menu)
+    * **Now** can be adjusted by 1H and 2H like smooth ramping
     
   * Message Entry: Easily add characters to your message or start fresh with the "create new message" option in the menu. (1st and 2nd option in 7H menu respectively.
 
