@@ -43,35 +43,16 @@ void sos_blink(uint8_t num, uint8_t dah) {
         nice_delay_ms(DIT_LENGTH);
     }
     // three "off" dits (or one "dah") between letters
-    nice_delay_ms(DIT_LENGTH*2);
+    // (except for SOS, which is collectively treated as a single "letter")
+    //nice_delay_ms(DIT_LENGTH*2);
 }
 
 inline void sos_mode_iter() {
-    // Spell "I LUV U" in Morse code
-
-    // I: ..
-    sos_blink(2, 0);  // I
-    nice_delay_ms(2000);
-
-    // L: .-..
-    sos_blink(1, 0);  // .
-    sos_blink(1, 1);  // -
-    sos_blink(2, 0);  // ..
-    nice_delay_ms(2000);
-
-    // U: ..-
-    sos_blink(2, 0);  // ..
-    sos_blink(1, 1);  // -
-    nice_delay_ms(2000);
-
-    // V: ...-
-    sos_blink(3, 0);  // ...
-    sos_blink(1, 1);  // -
-    nice_delay_ms(2000);
-
-    // U: ..-
-    sos_blink(2, 0);  // ..
-    sos_blink(1, 1);  // -
+    // one iteration of main loop()
+    //nice_delay_ms(1000);
+    sos_blink(3, 0);  // S
+    sos_blink(3, 1);  // O
+    sos_blink(3, 0);  // S
     nice_delay_ms(2000);
 }
 
