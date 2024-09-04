@@ -23,7 +23,7 @@ This project builds upon the features from [starryalley’s Anduril2 repo](https
     - `morse_mode.c` and `morse-mode.h`: Oversee state transitions and ensure smooth user interaction.
 
   * **Morse Code Speed Configuration:** Adjust the speed of Morse code playback via the 4H menu for precise control.
-    - Can be adjusted during message playback using 1H and 2H like smooth ramping.
+    - Can be adjusted during message playback using 1H and 2H like smooth ramping. 3H resets speed to default.
 
   * **Message Entry:** Easily add characters or clear the message entirely through intuitive options within the menu.
 
