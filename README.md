@@ -31,7 +31,7 @@ This project builds upon the features from [starryalley’s Anduril2 repo](https
 
 ### 🎨 Special Effects & RGB Modes
 
-  * **Spin RGB Animation:** Adds a dynamic RGB effect on Hank lights (e.g., D4K), cycling through colors to simulate spinning—perfect for a visual touch of flair.
+  * **Spin RGB Animation:** Adds a unique RGB effect on Hank lights (e.g., D4K), cycling through colors to simulate spinning—perfect for a visual touch of flair.
 
   * **RGB Cycle Adjustments:** Expanded the RGB cycle to include white, offering more variety in color patterns like disco and rainbow.
 
@@ -47,9 +47,9 @@ This project builds upon the features from [starryalley’s Anduril2 repo](https
 
 ### 🔧 Additional Modifications
 
-  * **Blink Pattern Enhancements:**
-      - **'Splat' Pattern:** A mix of disco and rainbow effects, offering vibrant color transitions.
-      - **'Pulse' Pattern:** Alternates between off, high, and low brightness to create a rhythmic light pattern.
+  * **RGB & Blink Pattern Additions:**
+      - **'Splat' RGB Pattern:** A mix of disco and rainbow effects, offering vibrant color transitions.
+      - **'Pulse' Blink Pattern:** Alternates between off, high, and low brightness to create a rhythmic light pattern.
 
   * **Moonlight Mode Adjustment:** The floor has been lowered to achieve a dimmer moonlight mode, offering a softer, more subtle light.
 
