@@ -106,12 +106,12 @@ sudo apt install avrdude
 ````
 ### PyMCUprog
 
-\`\`\`bash
+```bash
 sudo apt install python3 python3-pip python3-venv
 python3 -m venv .venv
 source .venv/bin/activate
 pip install pymcuprog
-\`\`\`
+```
 
 Activate the virtual environment with `source .venv/bin/activate` when using pymcuprog, and deactivate with `deactivate` when done.
 
