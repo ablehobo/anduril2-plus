@@ -1,117 +1,129 @@
-# ⚡ Enhanced Anduril Firmware Fork: Lighting Up New Possibilities! ⚡
+# ⚡ Enhanced Anduril Firmware Fork: Expanding Flashlight Capabilities ⚡
 
-Welcome to my customized fork of the Anduril firmware by ToyKeeper. I’ve added some brilliant new features to make your flashlight even more capable—because who doesn’t want a flashlight that can send secret messages in Morse code? 🌟
+Welcome to my customized fork of the Anduril firmware, originally created by ToyKeeper. This version includes several enhancements designed to push the limits of your flashlight—whether it's communicating in Morse code or refining special effects.
 
-The journey began with this [starry repo](https://github.com/starryalley/Anduril2) that adds many enhancemnts like an improved candle mode, so be sure to check out the project's page for a full list of features that are included in this fork.
+This project builds upon the features from [starryalley’s Anduril2 repo](https://github.com/starryalley/Anduril2). Be sure to explore the original project for more detailed insights into its wide array of capabilities.
 
-**Disclaimer:** I’m not a professional programmer—just a flashlight enthusiast using Anduril as an excuse to learn C. This project is a hands-on way for me to explore coding, so while I’m having fun, some features might be a bit experimental. Thanks for understanding!
+**Disclaimer:** I’m an enthusiastic hobbyist exploring C programming through this project. While I aim to maintain high functionality, some features may still be in development or experimental. Thanks for your understanding!
+
 ## 🌟 New Features & Enhancements
+
 ### 🔠 Morse Code Mode
 
-  * Morse Code Messaging: Flashlight communication just got old-school cool! Enter Morse code mode via cycling through the blinkie modes. You can input custom messages by entering the 4H menu.  The menu order is: 1-Letter Entry, 2-Backspace, 3-Message Clear, 4-Speed Control. Letter entry works by clicking the number of times for each letter (e.g., 1 press for A, 2 presses for B, etc.). The 10-click shortcut works here too. 30 clicks is a space (3x1H). The flashlight will then playback your message, using light to represent dots and dashes.
+  * **Morse Code Messaging:** You can now use your flashlight to communicate in Morse code. To access Morse code mode, cycle through the blinkie modes until you reach the mode. It will be in rotation before cycling back to battery check. Here, you can enter custom messages via the 4H menu:
+    - 1-Letter Entry
+    - 2-Backspace
+    - 3-Message Clear
+    - 4-Speed Control
+    - Letters are entered using the number of clicks for each letter (e.g., 1 click for A, 2 clicks for B, 10 clicks or 1H for J, etc.). 30 clicks (3x1H) adds a space.
+    - The flashlight will play back your message, using flashes for dots and dashes.
     
-  * Custom Files:
-      * morse_code.c and morse-code.h: These files handle the core logic for mapping button presses to Morse code, storing the messages, and playing them back at user-defined speeds.
-      * morse_mode.c and morse-mode.h: These manage the state transitions and configurations within the Morse code mode, ensuring smooth user interaction.
+  * **Core Logic Files:**
+    - `morse_code.c` and `morse-code.h`: Handle mapping button presses to Morse code, storing the message, and managing playback.
+    - `morse_mode.c` and `morse-mode.h`: Oversee state transitions and ensure smooth user interaction.
 
-### 🎛️ Menu Enhancements
-    
-  * Morse Code Speed Configuration: Adjust the playback speed of your Morse code messages to match your preferred signaling tempo. (4th option in 4H menu)
-    * **Now** can be adjusted by 1H and 2H like smooth ramping
-    
-  * Message Entry: Easily add characters to your message or start fresh with the "create new message" option in the menu. (1st and 3rd option in 4H menu respectively)
+  * **Morse Code Speed Configuration:** Adjust the speed of Morse code playback via the 4H menu for precise control.
+    - Can be adjusted during message playback using 1H and 2H like smooth ramping.
 
-  * Misc. Config Menu: New entry to toggle between Morse Code number output or normal for battery voltage and temperature readouts
+  * **Message Entry:** Easily add characters or clear the message entirely through intuitive options within the menu.
 
-  * Thermal Config Menu: New option after thermal calibration option to choose Celsius (1C) or Fahrenheight (2C) for readouts (calibration is still done in Celsius even if Fahrenheight output is selected)
+  * **Miscellaneous Config Menu:** Added an option to toggle between Morse code number output and standard readouts for battery voltage and temperature.
+
+### 🎨 Special Effects & RGB Modes
+
+  * **Spin RGB Animation:** Adds a dynamic RGB effect on Hank lights (e.g., D4K), cycling through colors to simulate spinning—perfect for a visual touch of flair.
+
+  * **RGB Cycle Adjustments:** Expanded the RGB cycle to include white, offering more variety in color patterns like disco and rainbow.
+
+### 🌡️ Temperature Output Toggle
+
+  * **Celsius/Fahrenheit Toggle:** Added a configuration option to toggle between Celsius and Fahrenheit for temperature readouts. The option is placed after the thermal calibration setting (note: calibration is still in Celsius).
 
 ### 🔄 State Management
 
-  * Seamless Integration: The new Morse code mode is fully integrated into the Anduril state machine, with transitions modeled after the thermal configuration to maintain a consistent user experience.
+  * **Morse Code Mode Integration:** Fully incorporated into Anduril’s state machine, ensuring a seamless user experience.
     
-  * Error Handling: Proper handling of invalid Morse code inputs ensures that only valid characters (A-Z) are processed, with graceful recovery from out-of-range inputs.
+  * **Error Handling:** Only valid characters (A-Z) are processed, and invalid inputs are gracefully handled.
 
-### 🎨 Special Effects for Hank Lights
+### 🔧 Additional Modifications
 
-  * Spin RGB Animation: Hank lights like the D4K now have a unique spin RGB animation. This effect cycles through red, green, and blue, creating the illusion that the button is spinning—a visual treat that adds flair to your flashlight!
+  * **Blink Pattern Enhancements:**
+      - **'Splat' Pattern:** A mix of disco and rainbow effects, offering vibrant color transitions.
+      - **'Pulse' Pattern:** Alternates between off, high, and low brightness to create a rhythmic light pattern.
 
-### 🔧 Other Modifications
+  * **Moonlight Mode Adjustment:** The floor has been lowered to achieve a dimmer moonlight mode, offering a softer, more subtle light.
 
-  * Blink Pattern Enhancements:
-      * 'Splat' Pattern: A cross between disco and rainbow, this pattern brings a lively burst of color to your flashlight’s repertoire.
-      * 'Pulse' Blink Pattern: A new blink pattern that alternates between off, high, and low brightness—perfect for those who want to create a rhythm with their light.
+  * **Dual Channel Swap:** For dual-channel Hank lights, CH1 and CH2 have been swapped to align with user preferences from the website configuration.
 
-  * Moonlight Mode Adjustment:
-      * Lowered Moonlight Floor: Achieved a dimmer moonlight mode, giving you a subtle and softer light in low-light situations.
+  * **Lockout Mode Enhancements:**
+      - In lockout mode, 5H activates momentary mid-level brightness, and 6H activates momentary turbo for quick access without unlocking the flashlight.
 
-  * Dual Channel Hank Lights Channel Swap:
-      * Swapped CH1 and CH2 on dual channel Hank lights because atleast the two I have are opposite from how I configured them on the website
+  * **Mid-ramp Blink:** Enabled mid-ramp blinking functionality for a more interactive ramping experience.
 
-  * Lockout Mode Enhancements:
-      * Mid and Turbo Activation: In lockout mode, a 5H activates momentary mid-level, and a 6H activates momentary turbo, providing quick access to higher brightness without unlocking.
+  * **Tempcheck for Non-Regulated Devices:** Added experimental support for temperature checks on devices without thermal regulation (e.g., BLF LT1 with attiny1616). This feature is a work in progress.
 
-  * RGB Cycle Adjustment:
-      * White Color Addition: Expanded the RGB cycle to include white, giving you more color options in disco, rainbow, and other color patterns.
-   
-  * Mid-ramp Blink:
-      * Enabled mid-ramp blink
+## 🛠️ What Is Anduril? And What's FSM?
 
-  * Temperature Output Modification:
-      * Fahrenheit Option: Toggle between Celsius and Fahrenheit in temperature readouts with a simple configuration option placed after thermal calibration.
-        
-  * Tempcheck Mode for Non-Regulated Devices: Enabled tempcheck mode on devices without thermal regulation, such as the BLF LT1 with an attiny1616. This feature is still a work in progress as I continue experimenting.
+Anduril is a comprehensive user interface for flashlights, powered by FSM (Finite State Machine), which provides a structured, intuitive control system for complex flashlight behavior.
 
-### 🛠️ What Is Anduril? And What's FSM?
+## 🔧 Firmware Flashing: Stay Updated
 
-Anduril is the ultimate flashlight UI, powered by FSM (Flashlight Spaghetti Monster), which makes controlling your flashlight as easy as untangling a well-organized flowchart.
-### 🔧 Firmware Flashing: Stay Up to Date
+To update your flashlight with the latest firmware, download the latest `.hex` file from this repository and follow these steps:
 
-Flashing your firmware has never been easier. Grab the latest .hex file here and follow the steps to update your light.
-Required Tools:
+**Required Tools:**
+  - Adapter: You may need a UPDI 3-pin adapter or AVR ISP 6-pin adapter depending on your flashlight’s MCU.
+  - Software: `avrdude`, `pymcuprog`, or `ZFlasher` will work for flashing the firmware.
+  - Device: Use a modern computer or phone to run the flashing program.
 
-  * Adapter: Depending on your light’s MCU, you might need a UPDI 3-pin adapter or an AVR ISP 6-pin adapter.
-  * Software: avrdude, pymcuprog, or ZFlasher will get the job done.
-  * Device: A modern computer or phone to run the flashing program.
+For detailed instructions, visit [anduril.click](https://anduril.click).
 
-For a detailed flashing guide, check out anduril.click.
-### 🛠️ Compiling: DIY Firmware
+## 🛠️ Compiling: DIY Firmware
 
-For those who like to tinker, compiling your firmware is encouraged! Linux is the preferred environment, but virtual machines and Docker work just fine.
-Build Requirements:
+If you prefer to build your firmware from source, here’s what you’ll need:
 
-  * AVR Toolchain: sudo apt install gcc-avr avr-libc binutils-avr
-  * Miscellaneous Tools: sudo apt install git wget unzip bash
-  * Atmel DFPs: Use ./make dfp to download and install these.
+**Build Requirements:**
+  - AVR Toolchain: Install via `sudo apt install gcc-avr avr-libc binutils-avr`
+  - Miscellaneous Tools: `sudo apt install git wget unzip bash`
+  - Atmel DFPs: Download and install with `./make dfp`.
 
-Building:
+**Building:**
+Run the provided `make` script:
+```bash
+./make
+````
+The compiled firmware will be available in the `hex/` directory.
 
-Run the make script included in this repo. For a full build, simply run ./make. Your compiled firmware will be ready in the hex/ directory.
-### 🎨 Customization
+## 🎨 Customization
 
-Place user-specific overrides in the users/myname/ directory, and the build script will handle the rest. Your personal settings will be applied automatically.
-### 💻 Flashing Programs
-#### AVRdude
+To personalize your firmware, place custom overrides in the `users/myname/` directory. The build script will automatically apply your changes.
 
-   ##### bash
+## 💻 Flashing Programs
 
-    sudo apt install avrdude
+### AVRdude
 
-#### PyMCUprog
+```bash
+sudo apt install avrdude
+````
+### PyMCUprog
 
-   ##### bash
+\`\`\`bash
+sudo apt install python3 python3-pip python3-venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pymcuprog
+\`\`\`
 
-    sudo apt install python3 python3-pip python3-venv
-    python3 -m venv .venv
-    source .venv/bin/activate
-    pip install pymcuprog
+Activate the virtual environment with `source .venv/bin/activate` when using pymcuprog, and deactivate with `deactivate` when done.
 
-Activate the virtual environment with source .venv/bin/activate when using pymcuprog, and deactivate with deactivate when done.
-### 🤝 Contributing
+## 🤝 Contributing
 
-Want to help this project shine even brighter? Here’s how you can contribute:
+Want to contribute to the project? Here’s how you can help:
 
-  * Support ToyKeeper on Patreon.
-  * Submit pull requests or patches to improve the code, docs, or tools.
-  * Report bugs or suggest new features.
-  * Share your knowledge on forums and contribute to the documentation.
-  * Encourage manufacturers to adopt and support this firmware.
+  - Support ToyKeeper on Patreon.
+  - Submit pull requests or patches to improve code, documentation, or tools.
+  - Report bugs or suggest new features.
+  - Share your experiences on forums and contribute to the community.
+  - Encourage flashlight manufacturers to adopt and support this firmware.
+
+
+
