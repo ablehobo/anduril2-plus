@@ -37,7 +37,7 @@ This project builds upon the features from [starryalley’s Anduril2 repo](https
 
 ### 🌡️ Temperature Output Toggle
 
-  * **Celsius/Fahrenheit Toggle:** Added a configuration option to toggle between Celsius and Fahrenheit for temperature readouts. The option is placed after the thermal calibration setting (note: calibration is still in Celsius).
+  * **Celsius/Fahrenheit Toggle:** Added a configuration option to toggle between Celsius and Fahrenheit for temperature readouts. The option is placed after the thermal calibration setting (note: calibrations are still in Celsius).
 
 ### 🔄 State Management
 
