@@ -150,6 +150,14 @@ typedef struct Config {
         uint8_t num_mode;
     #endif
 
+    //// Morse Code Mode
+#ifdef USE_MORSE_MODE
+    #define MAX_MESSAGE_LENGTH 40 // Maximum message length
+    uint8_t morse_speed;
+    uint8_t message[MAX_MESSAGE_LENGTH];
+    uint8_t message_length;
+#endif
+
     ///// hardware config / globals menu
     #ifdef USE_JUMP_START
         uint8_t jump_start_level;

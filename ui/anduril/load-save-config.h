@@ -168,6 +168,11 @@ Config cfg = {
         .therm_ceil = DEFAULT_THERM_CEIL,
         .therm_cal_offset = -3,
     #endif
+    #ifdef USE_MORSE_MODE
+        .morse_speed = DEFAULT_MORSE_SPEED,
+        // .message is an array, so you can't initialize it here
+        .message_length = INVALID_MORSE_CODE,  // Default to invalid message so init runs
+    #endif
 
     ///// aux LEDs
 

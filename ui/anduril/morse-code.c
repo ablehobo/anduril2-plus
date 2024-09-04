@@ -3,8 +3,8 @@
 #include <stdint.h>
 
 // Define the morse_speed variable
-uint8_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
-uint8_t message_length = INVALID_MORSE_CODE; // Default to invalid message so init runs
+//uint8_t morse_speed = DEFAULT_MORSE_SPEED;  // Speed in milliseconds
+//uint8_t message_length = INVALID_MORSE_CODE; // Default to invalid message so init runs
 
 typedef struct {
     uint8_t sequence[4];  // Max length of Morse code is 4 elements
@@ -43,9 +43,9 @@ static const PreProcessedMorseCode morse_code_sequences[] = {
 
 static void blink(uint8_t brightness, uint8_t duration) {
     set_level(brightness);
-    nice_delay_ms(duration * morse_speed);
+    nice_delay_ms(duration * cfg.morse_speed);
     set_level(0);
-    nice_delay_ms(morse_speed);  // Inter-element gap
+    nice_delay_ms(cfg.morse_speed);  // Inter-element gap
 }
 
 void decode_morse_pattern(uint8_t letter_index, uint8_t level) {
@@ -53,7 +53,7 @@ void decode_morse_pattern(uint8_t letter_index, uint8_t level) {
 
     if (letter_index == 26) {  // Assuming space is mapped to index 26
         // Handle space: 7 * morse_speed for a space
-        nice_delay_ms(7 * morse_speed);
+        nice_delay_ms(7 * cfg.morse_speed);
     } else {
         for (int i = 0; i < code.length; i++) {
             if (code.sequence[i] == 3) {
@@ -63,20 +63,20 @@ void decode_morse_pattern(uint8_t letter_index, uint8_t level) {
             }
 
             set_level(0);
-            nice_delay_ms(morse_speed);  // Inter-element gap
+            nice_delay_ms(cfg.morse_speed);  // Inter-element gap
         }
 
-        nice_delay_ms(3 * morse_speed);  // Final delay between letters
+        nice_delay_ms(3 * cfg.morse_speed);  // Final delay between letters
     }
 }
 
-uint8_t message[MAX_MESSAGE_LENGTH];
+//uint8_t message[MAX_MESSAGE_LENGTH];
 
 void init_message(void) {
-    message[0] = 14; // A
-    message[1] = 15; // B
-    message[2] = 20; // C
-    message_length = 3;
+    cfg.message[0] = 0; // A
+    cfg.message[1] = 1; // B
+    cfg.message[2] = 2; // C
+    cfg.message_length = 3;
 }
 
 MorseCode map_button_to_morse(uint8_t presses) {
@@ -90,38 +90,37 @@ MorseCode map_button_to_morse(uint8_t presses) {
 }
 
 void store_morse_code_input(uint8_t presses) {
-    if (message_length < MAX_MESSAGE_LENGTH) {
+    if (cfg.message_length < MAX_MESSAGE_LENGTH) {
         MorseCode letter = map_button_to_morse(presses);
         if (letter != INVALID_MORSE_CODE) {
-            message[message_length++] = letter;
+            cfg.message[cfg.message_length++] = letter;
         }
+        save_config();  // Automatically save whenever input is stored
     }
 }
 
-
 void display_morse_code_message(uint8_t brightness) {
-    for (uint8_t i = 0; i < message_length; i++) {
-            decode_morse_pattern(message[i], brightness);
-        }
+    for (uint8_t i = 0; i < cfg.message_length; i++) {
+        decode_morse_pattern(cfg.message[i], brightness);
     }
+}
 
 void set_morse_speed(uint8_t speed) {
-    morse_speed = speed;
+    cfg.morse_speed = speed;
+    save_config();  // Automatically save whenever speed is set
 }
 
 void morse_config_save(uint8_t step, uint8_t value) {
     if (value) {
         if (step == 1) {
             store_morse_code_input(value);
-            save_config();
         } else if (step == 2) {
-            message_length = message_length > 0 ? message_length - 1 : 0;
+            cfg.message_length = cfg.message_length > 0 ? cfg.message_length - 1 : 0;
         } else if (step == 3) {
-            message_length = 0;
+            cfg.message_length = 0;
             save_config();
         } else if (step == 4) {
             set_morse_speed(value * 20);
-            save_config();
         }
     }
 }
