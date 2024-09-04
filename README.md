@@ -1,6 +1,6 @@
 # ⚡ Enhanced Anduril Firmware Fork: Expanding Flashlight Capabilities ⚡
 
-Welcome to my customized fork of the Anduril firmware, originally created by ToyKeeper. This version includes several enhancements designed to push the limits of your flashlight—whether it's communicating in Morse code or refining special effects.
+Welcome to my customized fork of the Anduril firmware, originally created by ToyKeeper. This version includes several enhancements designed to push the limits of your flashlight—whether it's communicating in Morse code or some different visual effects.
 
 This project builds upon the features from [starryalley’s Anduril2 repo](https://github.com/starryalley/Anduril2). Be sure to explore the original project for more detailed insights into its wide array of capabilities.
 
