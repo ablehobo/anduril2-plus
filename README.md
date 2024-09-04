@@ -48,7 +48,7 @@ This project builds upon the features from [starryalley’s Anduril2 repo](https
 ### 🔧 Additional Modifications
 
   * **RGB & Blink Pattern Additions:**
-      - **'Splat' RGB Pattern:** A mix of disco and rainbow effects, offering vibrant color transitions.
+      - **'Splat' RGB Animation:** A mix of disco and rainbow effects, offering vibrant color transitions.
       - **'Pulse' Blink Pattern:** Alternates between off, high, and low brightness to create a rhythmic light pattern.
 
   * **Moonlight Mode Adjustment:** The floor has been lowered to achieve a dimmer moonlight mode, offering a softer, more subtle light.
