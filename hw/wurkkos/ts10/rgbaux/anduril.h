@@ -80,3 +80,4 @@
 // enable factory reset on 13H without loosening tailcap (required)
 #define USE_SOFT_FACTORY_RESET
 
+#define USE_MORSE_MODE
